@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Mohammad Mahdi Takach | Mahdi Media Pro — Official Portfolio Stylesheet
+   ========================================================================== */
+
+:root {
+  --bg-primary: #111113;
+  --bg-secondary: #18181c;
+  --bg-card: #1f1f25;
+  --bg-card-hover: #27272f;
+  --gold-primary: #F7C038;
+  --gold-light: #fde047;
+  --gold-dark: #d99b16;
+  --text-primary: #ffffff;
+  --text-secondary: #b4b4be;
+  --text-muted: #7e7e8c;
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-gold: rgba(247, 192, 56, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Cairo', 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* Subtle studio pattern inspired by Mahdi Media brand cover */
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(247, 192, 56, 0.07) 0%, transparent 35%),
+    radial-gradient(circle at 85% 80%, rgba(247, 192, 56, 0.05) 0%, transparent 40%),
+    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1' stroke-opacity='0.025'%3E%3Ccircle cx='30' cy='30' r='14'/%3E%3Ccircle cx='30' cy='30' r='6'/%3E%3Crect x='70' y='18' width='32' height='24' rx='3'/%3E%3Cpath d='M78 48 h16 M86 42 v6'/%3E%3Cpath d='M20 80 l18 -18 l8 8 l-18 18 z'/%3E%3Ccircle cx='85' cy='85' r='16' stroke-dasharray='4 3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+html[dir="ltr"] body {
+  font-family: 'Inter', 'Cairo', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111113;
+}
+::-webkit-scrollbar-thumb {
+  background: #2e2e38;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-primary);
+}
+
+/* Gold top border accent matching Mahdi Media Pro Pricing PDF */
+.package-card {
+  position: relative;
+  background: linear-gradient(180deg, rgba(35, 35, 42, 0.92) 0%, rgba(24, 24, 28, 0.96) 100%);
+  border: 1px solid var(--border-subtle);
+  border-top: 4px solid var(--gold-primary);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.7), 0 0 20px -5px rgba(247, 192, 56, 0.18);
+  border-color: var(--border-gold);
+}
+
+.package-card.featured-pkg {
+  background: linear-gradient(180deg, rgba(44, 39, 24, 0.95) 0%, rgba(26, 26, 32, 0.98) 100%);
+  border-color: rgba(247, 192, 56, 0.45);
+  border-top: 4px solid var(--gold-light);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF3B0 0%, #F7C038 55%, #E09F1F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-portrait-ring {
+  position: relative;
+  border-radius: 9999px;
+  padding: 6px;
+  background: linear-gradient(135deg, #F7C038 0%, rgba(247, 192, 56, 0.15) 60%, #F7C038 100%);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 40px rgba(247, 192, 56, 0.2);
+}
+
+.glass-nav {
+  background: rgba(17, 17, 19, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.work-card {
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.work-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(247, 192, 56, 0.5);
+  box-shadow: 0 14px 30px -8px rgba(0, 0, 0, 0.65);
+}
+
+.work-card img {
+  transition: transform 0.4s ease;
+}
+.work-card:hover img {
+  transform: scale(1.04);
+}
+
+/* Modal Backdrop */
+.modal-backdrop {
+  background: rgba(9, 9, 11, 0.82);
+  backdrop-filter: blur(6px);
+}

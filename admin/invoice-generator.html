@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahdi Media Pro — Private Owner Invoice Generator</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <style>
+    body { background: #0c0c0e; color: #fff; font-family: 'Inter', sans-serif; }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: #0c0c0e !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body class="min-h-screen p-6 md:p-12">
+  <div class="max-w-4xl mx-auto">
+    <div class="no-print mb-6 p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-between">
+      <div class="text-xs sm:text-sm text-amber-200">
+        <strong>أداة خاصة بمحمد مهدي طقش (Owner Only):</strong> انقر على أي نص في الفاتورة لتعديله ثم اضغط "طباعة / حفظ كـ PDF" لإرسالها للعميل عند انتهاء المشروع.
+      </div>
+      <button onclick="window.print()" class="px-4 py-2 rounded-lg bg-[#F7C038] text-black font-bold text-xs">Print / Save PDF</button>
+    </div>
+
+    <div class="border border-white/40 bg-[#0c0c0e] text-white">
+      <div class="grid grid-cols-1 md:grid-cols-2 border-b border-white/40">
+        <div class="p-8 border-b md:border-b-0 md:border-r border-white/40 flex flex-col justify-between">
+          <div class="flex items-center gap-3 mb-8">
+            <img src="../assets/images/logo.png" alt="Mahdi Media" class="h-12 w-auto" />
+            <span class="text-xl font-bold tracking-wider">Mahdi Media</span>
+          </div>
+          <div class="text-xs space-y-1 text-gray-300" contenteditable="true">
+            <div>MOHAMMAD MAHDI TAKACH</div>
+            <div>BEIRUT, LEBANON</div>
+            <div class="pt-2">PHONE: +961 81 947 685</div>
+            <div>MAIL: mhmdmahditakach@gmail.com</div>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <div class="p-6 border-b border-white/40 text-center text-lg font-semibold tracking-widest" contenteditable="true">
+            INVOICE Nº 0001
+          </div>
+          <div class="p-6 border-b border-white/40 text-center text-sm tracking-widest" contenteditable="true">
+            OCTOBER 17, 2026
+          </div>
+          <div class="p-8 text-center space-y-1" contenteditable="true">
+            <div class="text-sm font-bold tracking-wider mb-2">CLIENT NAME / COMPANY</div>
+            <div class="text-xs text-gray-300">CLIENT ADDRESS, CITY</div>
+            <div class="text-xs text-gray-300">PHONE: +961 00 000 000</div>
+            <div class="text-xs text-gray-300">CLIENT@EMAIL.COM</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-4 px-8 py-4 border-b border-white/40 text-xs font-bold tracking-widest uppercase">
+        <div class="col-span-2">CONCEPT / SERVICE</div>
+        <div>UNITS</div>
+        <div class="text-right">AMOUNT</div>
+      </div>
+
+      <div class="p-8 min-h-[260px] space-y-4 text-sm" contenteditable="true">
+        <div class="grid grid-cols-4 py-2 border-b border-white/10">
+          <div class="col-span-2">Standard Monthly Package (15 Posts, 8 Reels, 1 Half-Day Shoot)</div>
+          <div>1 Month</div>
+          <div class="text-right font-bold">$400</div>
+        </div>
+        <div class="grid grid-cols-4 py-2 border-b border-white/10">
+          <div class="col-span-2">Extra 60-Second Reel (Edit Only)</div>
+          <div>2 Reels</div>
+          <div class="text-right font-bold">$60</div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 border-t border-white/40">
+        <div class="p-6 border-b md:border-b-0 md:border-r border-white/40 flex items-center justify-center text-[#F7C038] text-2xl">
+          ⟶
+        </div>
+        <div class="col-span-2 p-8 flex items-center justify-between text-lg font-bold tracking-widest" contenteditable="true">
+          <span>TOTAL AMOUNT</span>
+          <span class="text-2xl text-[#F7C038]">$460 USD</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

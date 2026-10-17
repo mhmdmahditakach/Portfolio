@@ -1,12 +1,54 @@
 /* ==========================================================================
-   Mohammad Mahdi Takach | Mahdi Media Pro — Bilingual Data & Content Store
-   Easy to customize when adding new Featured Works or updating prices on GitHub
+   Mohammad Mahdi Takach | Mahdi Media Pro — Centralized Data & CMS Config
+   All site content, section ordering, and hashed admin security settings.
+   Zero API keys or plaintext passwords are stored in this file.
    ========================================================================== */
 'use strict';
 
 window.PORTFOLIO_CONFIG = {
+  security: {
+    secretRouteSlug: "mahdi-vault-admin",
+    salt: "MAHDI_MEDIA_PRO_SALT_2026",
+    // Salted SHA-256 hash of "MAHDI_MEDIA_PRO_SALT_2026:mahdi.admin:MahdiMedia@2026!"
+    authHash: "ee0743d480dc393e1c9a22f53795efad8d9564c171ddfb33661ae526de6a8279",
+    maxLoginAttempts: 5,
+    lockoutSeconds: 60
+  },
+
+  assets: {
+    logo: "assets/images/logo.png",
+    profile: "assets/images/profile.jpg",
+    cover: "assets/images/cover.jpg",
+    servicesPost: "assets/images/services-post.jpg"
+  },
+
+  sectionOrder: [
+    { id: "featured-works", titleAr: "الأعمال المميزة (Featured Works)", titleEn: "Featured Works", enabled: true },
+    { id: "portfolio-vault", titleAr: "خانة معرض الأعمال الكامل (Google Drive Vaults)", titleEn: "Google Drive Portfolio Vaults", enabled: true },
+    { id: "services-pricing", titleAr: "الباقات الشهرية والتصميم الطباعي (Packages & Print)", titleEn: "Monthly Packages & Print Design", enabled: true },
+    { id: "quote-calculator", titleAr: "حاسبة التكلفة التقريبية (Approximate Calculator)", titleEn: "Approximate Cost Calculator", enabled: true },
+    { id: "cv-section", titleAr: "السيرة الذاتية والخبرات (CV & Experience)", titleEn: "CV, Experience & Education", enabled: true }
+  ],
+
+  hero: {
+    roleBadgeAr: "مصور فوتوغرافي • مصور فيديو • مونتير فيديو • مصمم غرافيك",
+    roleBadgeEn: "Photographer • Videographer • Video Editor • Graphic Designer",
+    titleAr: "محمد مهدي الطقش",
+    titleEn: "Mohammad Mahdi Takach",
+    brandBadgeAr: "مؤسس Mahdi Media للإنتاج المرئي والتصميم",
+    brandBadgeEn: "Founder of Mahdi Media Pro — Visual Production & Design",
+    subtitleAr: "خبرة عملية وميدانية تمتد لأكثر من 6 سنوات (منذ عام 2019) في تصوير ومونتاج أكثر من 150 تقريراً إخبارياً تلفزيونياً (لصالح قناتي المنار والميادين)، وإنتاج البودكاست والمحتوى المرئي والتصاميم الغرافيكية للشركات والمؤسسات.",
+    subtitleEn: "Over 6 years of hands-on field and studio experience (since 2019), filming and editing 150+ broadcast TV news reports (for Al-Manar & Al-Mayadeen), producing video podcasts, and crafting visual identities for agencies and institutions.",
+    stats: [
+      { id: "stat-1", numAr: "+6", numEn: "6+", labelAr: "سنوات خبرة ميدانية واستوديو (منذ 2019)", labelEn: "Years of Field & Studio Experience (Since 2019)" },
+      { id: "stat-2", numAr: "+150", numEn: "150+", labelAr: "تقرير إخباري وميداني متلفز (المنار والميادين)", labelEn: "Broadcast TV News & Field Reports" },
+      { id: "stat-3", numAr: "+10", numEn: "10+", labelAr: "شركات ومؤسسات وحملات إعلامية وبودكاست", labelEn: "Agencies, NGOs & Podcast Productions" },
+      { id: "stat-4", numAr: "12+", numEn: "12+", labelAr: "خدمة تصميم غرافيكي طباعي ورقمي متكاملة", labelEn: "Print & Digital Graphic Design Specialties" }
+    ]
+  },
+
   contact: {
-    nameAr: "محمد مهدي طقش",
+    nameAr: "محمد مهدي الطقش",
     nameEn: "Mohammad Mahdi Takach",
     brandAr: "مهدي ميديا | Mahdi Media",
     brandEn: "Mahdi Media Pro",
@@ -258,6 +300,7 @@ window.PORTFOLIO_CONFIG = {
 
   experience: [
     {
+      id: "exp-1",
       periodAr: "2025 – الآن",
       periodEn: "2025 – Present",
       roleAr: "مصور فوتوغرافي وفيديو ومونتير ومصمم غرافيك مستقل",
@@ -274,6 +317,7 @@ window.PORTFOLIO_CONFIG = {
       ]
     },
     {
+      id: "exp-2",
       periodAr: "2024 – الآن",
       periodEn: "2024 – Present",
       roleAr: "مصور ومونتير تقارير إخبارية",
@@ -290,6 +334,7 @@ window.PORTFOLIO_CONFIG = {
       ]
     },
     {
+      id: "exp-3",
       periodAr: "2023 – 2025",
       periodEn: "2023 – 2025",
       roleAr: "مصور وفيديوغرافر ومونتير محتوى توثيقي ومصمم غرافيك",
@@ -306,6 +351,7 @@ window.PORTFOLIO_CONFIG = {
       ]
     },
     {
+      id: "exp-4",
       periodAr: "2023 – 2024",
       periodEn: "2023 – 2024",
       roleAr: "مصور ومونتير محتوى مرئي وبودكاست ومصمم غرافيك",
@@ -322,6 +368,7 @@ window.PORTFOLIO_CONFIG = {
       ]
     },
     {
+      id: "exp-5",
       periodAr: "2019 – الآن",
       periodEn: "2019 – Present",
       roleAr: "مصور فوتوغرافي وفيديو ومونتير ومصمم غرافيك (دوام جزئي)",
@@ -341,6 +388,7 @@ window.PORTFOLIO_CONFIG = {
 
   education: [
     {
+      id: "edu-1",
       periodAr: "2024 – الآن",
       periodEn: "2024 – Present",
       degreeAr: "طالب إجازة في تكنولوجيا المعلومات وأنظمة الإدارة (MIT) – قيد الدراسة",
@@ -350,6 +398,7 @@ window.PORTFOLIO_CONFIG = {
       link: "https://www.mu.edu.lb/en/faculties/fba/study-programs/department-of-information-technology-and-management-systems/?id=accor-11924"
     },
     {
+      id: "edu-2",
       periodAr: "2023 – 2024",
       periodEn: "2023 – 2024",
       degreeAr: "البكالوريا الفنية (BT3) في المحاسبة والمعلوماتية",

@@ -1,5 +1,7 @@
 /* ==========================================================================
-   Mohammad Mahdi Takach | Mahdi Media Pro — Official Portfolio Stylesheet
+   Mohammad Mahdi Takach | Mahdi Media Pro — Production Stylesheet (v2.0)
+   100% Custom Brand Identity: Charcoal Black (#111113) & Studio Gold (#F7C038)
+   Zero Purple Gradients | Full Mobile & RTL/LTR Support | Drag-and-Drop UI
    ========================================================================== */
 
 :root {
@@ -29,8 +31,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  /* Subtle studio pattern inspired by Mahdi Media brand cover */
-  background-image: 
+  background-image:
     radial-gradient(circle at 15% 15%, rgba(247, 192, 56, 0.07) 0%, transparent 35%),
     radial-gradient(circle at 85% 80%, rgba(247, 192, 56, 0.05) 0%, transparent 40%),
     url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1' stroke-opacity='0.025'%3E%3Ccircle cx='30' cy='30' r='14'/%3E%3Ccircle cx='30' cy='30' r='6'/%3E%3Crect x='70' y='18' width='32' height='24' rx='3'/%3E%3Cpath d='M78 48 h16 M86 42 v6'/%3E%3Cpath d='M20 80 l18 -18 l8 8 l-18 18 z'/%3E%3Ccircle cx='85' cy='85' r='16' stroke-dasharray='4 3'/%3E%3C/g%3E%3C/svg%3E");
@@ -92,7 +93,7 @@ html[dir="ltr"] body {
 }
 
 .glass-nav {
-  background: rgba(17, 17, 19, 0.88);
+  background: rgba(17, 17, 19, 0.9);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -116,6 +117,41 @@ html[dir="ltr"] body {
 
 /* Modal Backdrop */
 .modal-backdrop {
-  background: rgba(9, 9, 11, 0.82);
-  backdrop-filter: blur(6px);
+  background: rgba(9, 9, 11, 0.86);
+  backdrop-filter: blur(8px);
+}
+
+/* Drag and Drop Interactive States */
+.dnd-item {
+  cursor: grab;
+  transition: transform 0.18s ease, border-color 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+}
+.dnd-item:active {
+  cursor: grabbing;
+}
+.dnd-item.dragging {
+  opacity: 0.45;
+  border-color: #F7C038 !important;
+  transform: scale(0.98);
+}
+.dnd-item.drag-over {
+  border-color: #F7C038 !important;
+  box-shadow: 0 0 0 2px rgba(247, 192, 56, 0.45);
+  background-color: rgba(247, 192, 56, 0.08) !important;
+}
+
+.dropzone-box {
+  border: 2px dashed rgba(247, 192, 56, 0.4);
+  transition: all 0.2s ease;
+}
+.dropzone-box.drag-active,
+.dropzone-box:hover {
+  border-color: #F7C038;
+  background-color: rgba(247, 192, 56, 0.08);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
 }

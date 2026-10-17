@@ -3,8 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>محمد مهدي طقش | Mohammad Mahdi Takach — Mahdi Media Portfolio &amp; Services</title>
-  <meta name="description" content="الموقع الرسمي ومعرض الأعمال لـ محمد مهدي طقش (Mahdi Media) — مصور فوتوغرافي، مصور ومونتير فيديو، ومصمم غرافيك في بيروت والبقاع، لبنان." />
+  <title>محمد مهدي الطقش | Mohammad Mahdi Takach — Mahdi Media Pro</title>
+  <meta name="description" content="الموقع الرسمي ومعرض الأعمال لـ محمد مهدي الطقش (Mahdi Media Pro) — مصور فوتوغرافي، مصور ومونتير فيديو، ومصمم غرافيك في بيروت والبقاع، لبنان. خبرة تزيد عن 6 سنوات وأكثر من 150 تقريراً متلفزاً." />
+  <meta name="keywords" content="محمد مهدي الطقش, Mohammad Mahdi Takach, Mahdi Media, مصور بيروت, مونتير فيديو لبنان, مصمم غرافيك, تصوير بودكاست, تقارير تلفزيونية" />
+  <meta name="author" content="Mohammad Mahdi Takach" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#111113" />
+
+  <!-- Open Graph / Social Share Preview Meta Tags (Anti-Vibe-Coding #6) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="محمد مهدي الطقش | Mohammad Mahdi Takach — Mahdi Media Pro" />
+  <meta property="og:description" content="مصور فوتوغرافي، مصور ومونتير فيديو، ومصمم غرافيك بخبرة +6 سنوات وأكثر من 150 تقريراً تلفزيونياً وميدانياً. استعرض معرض الأعمال واحسب تكلفة مشروعك." />
+  <meta property="og:image" content="assets/images/cover.jpg" />
+  <meta property="og:locale" content="ar_LB" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="محمد مهدي الطقش | Mohammad Mahdi Takach — Mahdi Media Pro" />
+  <meta name="twitter:description" content="الإنتاج المرئي، التصوير الفوتوغرافي والفيديو، المونتاج، والتصميم الغرافيكي المتكامل في لبنان." />
+  <meta name="twitter:image" content="assets/images/cover.jpg" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Mohammad Mahdi Takach — Mahdi Media Pro",
+    "alternateName": "محمد مهدي الطقش — مهدي ميديا",
+    "description": "Photography, Videography, Broadcast News Editing, Podcast Production, and Graphic Design in Beirut & Bekaa, Lebanon.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Beirut",
+      "addressCountry": "LB"
+    },
+    "telephone": "+96181947685",
+    "email": "mhmdmahditakach@gmail.com",
+    "sameAs": [
+      "https://www.instagram.com/mahdi.media.pro",
+      "https://www.instagram.com/mhmdmahditakach"
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
@@ -14,13 +55,13 @@
 <body class="min-h-screen flex flex-col selection:bg-[#F7C038] selection:text-black">
 
   <!-- Top Navigation Bar -->
-  <header class="glass-nav sticky top-0 z-40">
+  <header class="glass-nav sticky top-0 z-40 no-print">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       <!-- Brand Identity -->
       <div class="flex items-center gap-3.5">
-        <img src="assets/images/logo.png" alt="شعار مهدي ميديا | Mahdi Media Logo" class="h-11 w-auto object-contain" />
+        <img id="header-secret-logo" data-asset="logo" src="assets/images/logo.png" alt="شعار مهدي ميديا | Mahdi Media Logo" class="h-11 w-auto object-contain cursor-pointer" />
         <div class="border-r border-white/15 pr-3.5 rtl:border-r rtl:pr-3.5 ltr:border-r-0 ltr:pr-0 ltr:border-l ltr:pl-3.5">
-          <div class="text-base sm:text-lg font-extrabold text-white leading-tight" data-i18n="heroTitle">محمد مهدي طقش</div>
+          <div id="nav-owner-name" class="text-base sm:text-lg font-extrabold text-white leading-tight" data-i18n="heroTitle">محمد مهدي الطقش</div>
           <div class="text-xs font-semibold text-[#F7C038] tracking-wide">Mahdi Media Pro</div>
         </div>
       </div>
@@ -37,8 +78,8 @@
       <!-- Actions: Language Switcher + CTA + Mobile Menu -->
       <div class="flex items-center gap-2.5">
         <button type="button" id="lang-toggle-btn" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-xs sm:text-sm font-bold text-[#F7C038] transition flex items-center gap-1.5">
-          <span>🌐</span>
-          <span data-i18n="langBtn">English</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18zM3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 000 18M12.5 3a17 17 0 010 18"/></svg>
+          <span class="sr-only">🌐 </span><span data-i18n="langBtn">English</span>
         </button>
         <button type="button" data-scroll-to="quote-calculator" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#F7C038] hover:bg-[#eab308] text-black font-extrabold text-xs sm:text-sm shadow-lg shadow-[#F7C038]/20 transition" data-i18n="navCta">
           اطلب خدمة الآن
@@ -61,7 +102,10 @@
     </div>
   </header>
 
-  <main class="flex-1">
+  <!-- ========================================================================
+       PUBLIC WEBSITE VIEW
+       ======================================================================== -->
+  <div id="public-site-view" class="flex-1">
     <!-- HERO SECTION -->
     <section class="relative pt-10 pb-16 lg:pt-16 lg:pb-24 overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,20 +113,20 @@
           <!-- Text Column -->
           <div class="lg:col-span-7 space-y-6">
             <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F7C038]/15 border border-[#F7C038]/35 text-[#F7C038] text-xs sm:text-sm font-bold">
-              <span>🎬</span>
-              <span data-i18n="heroRoleBadge">مصور فوتوغرافي • مصور فيديو • مونتير فيديو • مصمم غرافيك</span>
+              <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              <span id="hero-role-badge-text" data-i18n="heroRoleBadge">مصور فوتوغرافي • مصور فيديو • مونتير فيديو • مصمم غرافيك</span>
             </div>
 
             <div class="space-y-2">
               <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
-                <span data-i18n="heroTitle">محمد مهدي طقش</span>
+                <span id="hero-main-title" data-i18n="heroTitle">محمد مهدي الطقش</span>
               </h1>
               <div class="flex items-center gap-3 pt-1">
-                <span class="text-lg sm:text-xl font-bold gold-gradient-text" data-i18n="heroBrandBadge">مؤسس Mahdi Media للإنتاج المرئي والتصميم</span>
+                <span id="hero-brand-badge-text" class="text-lg sm:text-xl font-bold gold-gradient-text" data-i18n="heroBrandBadge">مؤسس Mahdi Media للإنتاج المرئي والتصميم</span>
               </div>
             </div>
 
-            <p class="text-base sm:text-lg text-gray-300 leading-relaxed max-w-2xl" data-i18n="heroSubtitle">
+            <p id="hero-subtitle-text" class="text-base sm:text-lg text-gray-300 leading-relaxed max-w-2xl" data-i18n="heroSubtitle">
               خبرة عملية وميدانية تمتد لأكثر من 6 سنوات (منذ عام 2019) في تصوير ومونتاج أكثر من 150 تقريراً إخبارياً تلفزيونياً (لصالح قناتي المنار والميادين)، وإنتاج البودكاست والمحتوى المرئي والتصاميم الغرافيكية للشركات والمؤسسات.
             </p>
 
@@ -97,12 +141,16 @@
               <button type="button" data-scroll-to="portfolio-vault" class="px-5 py-3.5 rounded-xl bg-[#1a1a22] hover:bg-[#252530] text-[#F7C038] border border-[#F7C038]/30 font-bold text-sm transition" data-i18n="heroBtnVault">
                 تصفح أرشيف Google Drive
               </button>
+              <button type="button" data-open-modal="vcard-qr-modal" class="px-4 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-gray-200 border border-white/15 font-bold text-sm transition flex items-center gap-2">
+                <svg class="w-4 h-4 text-[#F7C038]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4h6v6H4V4zm10 0h6v6h-6V4zM4 14h6v6H4v-6zm10 3h3m3 0h-3m0 0v-3m0 3v3"/></svg>
+                <span data-i18n="heroBtnVcard">بطاقة التواصل الرقمية &amp; QR</span>
+              </button>
             </div>
 
             <!-- Quick Direct Contact Strip -->
             <div class="pt-4 flex flex-wrap items-center gap-4 text-xs sm:text-sm text-gray-400 border-t border-white/10">
               <a href="https://wa.me/96181947685" target="_blank" rel="noopener noreferrer" class="hover:text-[#F7C038] transition flex items-center gap-1.5">
-                <span class="text-emerald-400">●</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
                 <span>WhatsApp: +961 81 947 685</span>
               </a>
               <span>•</span>
@@ -120,16 +168,14 @@
           <div class="lg:col-span-5 flex flex-col items-center">
             <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
               <div class="hero-portrait-ring w-full h-full overflow-hidden">
-                <img src="assets/images/profile.jpg" alt="محمد مهدي طقش | Mohammad Mahdi Takach" class="w-full h-full object-cover rounded-full" />
+                <img id="hero-portrait-img" src="assets/images/profile.jpg" alt="محمد مهدي الطقش | Mohammad Mahdi Takach" class="w-full h-full object-cover rounded-full" />
               </div>
-              <!-- Floating Badge 1 -->
               <div class="absolute -bottom-3 right-2 sm:right-4 px-4 py-2 rounded-xl bg-[#18181f]/95 border border-[#F7C038]/40 shadow-xl flex items-center gap-2">
                 <span class="w-2.5 h-2.5 rounded-full bg-[#F7C038]"></span>
                 <span class="text-xs font-bold text-white">Sony &amp; Canon Cinema</span>
               </div>
-              <!-- Floating Badge 2 -->
               <div class="absolute top-4 -left-2 sm:-left-4 px-3.5 py-2 rounded-xl bg-[#18181f]/95 border border-white/15 shadow-xl flex items-center gap-2">
-                <img src="assets/images/logo.png" alt="Logo" class="h-5 w-auto" />
+                <img data-asset="logo" src="assets/images/logo.png" alt="Logo" class="h-5 w-auto" />
                 <span class="text-xs font-bold text-[#F7C038]">Premiere &amp; After Effects</span>
               </div>
             </div>
@@ -137,7 +183,7 @@
         </div>
 
         <!-- Key Stats Grid -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12 pt-8 border-t border-white/10">
+        <div id="hero-stats-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12 pt-8 border-t border-white/10">
           <div class="p-5 rounded-2xl bg-[#18181f] border border-white/10">
             <div class="text-3xl sm:text-4xl font-black text-[#F7C038] mb-1" data-i18n="statYearsNum">+6</div>
             <div class="text-xs sm:text-sm text-gray-300 font-medium" data-i18n="statYearsLabel">سنوات خبرة ميدانية واستوديو (منذ 2019)</div>
@@ -158,332 +204,770 @@
       </div>
     </section>
 
-    <!-- FEATURED WORKS ON HOMEPAGE -->
-    <section id="featured-works" class="py-16 bg-[#15151a] border-t border-b border-white/5">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
-          <div>
+    <!-- DYNAMIC REORDERABLE SECTIONS CONTAINER -->
+    <main id="main-sections-container">
+      <!-- 1. FEATURED WORKS ON HOMEPAGE -->
+      <section id="featured-works" class="py-16 bg-[#15151a] border-t border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="mb-8">
             <h2 class="text-2xl sm:text-3xl font-black text-white mb-2" data-i18n="worksHeading">أعمال مميزة ومشاريع مختارة</h2>
             <p class="text-sm sm:text-base text-gray-400 max-w-2xl" data-i18n="worksSub">
               نماذج من أبرز التغطيات التلفزيونية، إنتاج البودكاست، التوثيق المرئي، والهويات البصرية
             </p>
           </div>
-          <button type="button" id="open-add-work-btn" class="self-start md:self-auto px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 border border-[#F7C038]/40 text-[#F7C038] text-xs font-bold transition" data-i18n="addWorkBtn">
-            + إضافة عمل مميز للمعرض
-          </button>
+
+          <!-- Category Filter Bar -->
+          <div class="flex flex-wrap items-center gap-2 mb-8">
+            <button type="button" data-work-filter="all" class="px-4 py-2 rounded-full text-sm font-bold transition-all bg-[#F7C038] text-black shadow-md" data-i18n="filterAll">الكل</button>
+            <button type="button" data-work-filter="broadcast" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#1f1f25] text-gray-300 hover:bg-[#2a2a32] border border-white/10" data-i18n="filterBroadcast">تقارير تلفزيونية وميدانية</button>
+            <button type="button" data-work-filter="podcast" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#1f1f25] text-gray-300 hover:bg-[#2a2a32] border border-white/10" data-i18n="filterPodcast">بودكاست وإنتاج مرئي</button>
+            <button type="button" data-work-filter="documentary" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#1f1f25] text-gray-300 hover:bg-[#2a2a32] border border-white/10" data-i18n="filterDocumentary">توثيق وفعاليات</button>
+            <button type="button" data-work-filter="design" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#1f1f25] text-gray-300 hover:bg-[#2a2a32] border border-white/10" data-i18n="filterDesign">تصميم غرافيكي ومطبوعات</button>
+          </div>
+
+          <!-- Featured Works Cards Grid -->
+          <div id="featured-works-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
         </div>
+      </section>
 
-        <!-- Category Filter Bar -->
-        <div class="flex flex-wrap items-center gap-2 mb-8">
-          <button type="button" data-work-filter="all" class="px-4 py-2 rounded-full text-sm font-bold transition-all bg-[#F7C038] text-black shadow-md" data-i18n="filterAll">الكل</button>
-          <button type="button" data-work-filter="broadcast" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#1f1f25] text-gray-300 hover:bg-[#2a2a32] border border-white/10" data-i18n="filterBroadcast">تقارير تلفزيونية وميدانية</button>
-          <button type="button" data-work-filter="podcast" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#1f1f25] text-gray-300 hover:bg-[#2a2a32] border border-white/10" data-i18n="filterPodcast">بودكاست وإنتاج مرئي</button>
-          <button type="button" data-work-filter="documentary" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#1f1f25] text-gray-300 hover:bg-[#2a2a32] border border-white/10" data-i18n="filterDocumentary">توثيق وفعاليات</button>
-          <button type="button" data-work-filter="design" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#1f1f25] text-gray-300 hover:bg-[#2a2a32] border border-white/10" data-i18n="filterDesign">تصميم غرافيكي ومطبوعات</button>
+      <!-- 2. DEDICATED DUAL GOOGLE DRIVE PORTFOLIO VAULT -->
+      <section id="portfolio-vault" class="py-16 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="rounded-3xl bg-gradient-to-br from-[#1f1f27] via-[#18181e] to-[#121216] border border-[#F7C038]/35 p-6 sm:p-10 shadow-2xl">
+            <div class="max-w-3xl mb-8">
+              <span class="inline-block px-3.5 py-1 rounded-full bg-[#F7C038]/15 text-[#F7C038] text-xs font-bold mb-3 border border-[#F7C038]/30" data-i18n="vaultBadge">
+                الأرشيف الرسمي الكامل — Google Drive &amp; Instagram
+              </span>
+              <h2 class="text-2xl sm:text-3xl font-black text-white mb-2" data-i18n="vaultHeading">خانة معرض الأعمال المتخصصة</h2>
+              <p class="text-sm sm:text-base text-gray-300 leading-relaxed" data-i18n="vaultSub">
+                تصفح المجلدات الكاملة للأعمال المصورة، التقارير التلفزيونية، حلقات البودكاست، والتصاميم بجودتها الأصلية مباشرة عبر Google Drive
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <!-- Drive Vault 1: My WORK -->
+              <div class="p-6 rounded-2xl bg-[#141419] border border-white/10 hover:border-[#F7C038]/60 transition flex flex-col justify-between">
+                <div>
+                  <div class="w-12 h-12 rounded-xl bg-[#F7C038]/15 border border-[#F7C038]/30 flex items-center justify-center text-[#F7C038] mb-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+                  </div>
+                  <h3 class="text-lg font-extrabold text-white mb-2" data-i18n="vault1Title">المعرض الشامل للأعمال والمشاريع (My WORK)</h3>
+                  <p class="text-sm text-gray-400 leading-relaxed mb-6" data-i18n="vault1Desc">
+                    يضم نماذج مختارة من مشاريع التصوير، المونتاج، التصاميم الغرافيكية، والأعمال الإبداعية المنفذة لعلامة Mahdi Media.
+                  </p>
+                </div>
+                <a id="vault-1-link" href="https://drive.google.com/drive/folders/1vRzDhx01ktw4y4p_fqv-AcFg-RI4ekvu?usp=drive_link" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-[#F7C038] hover:bg-[#eab308] text-black font-extrabold text-sm text-center transition block">
+                  <span data-i18n="vault1Btn">فتح مجلد My WORK على Drive</span> ↗
+                </a>
+              </div>
+
+              <!-- Drive Vault 2: CV Portfolio -->
+              <div class="p-6 rounded-2xl bg-[#141419] border border-white/10 hover:border-[#F7C038]/60 transition flex flex-col justify-between">
+                <div>
+                  <div class="w-12 h-12 rounded-xl bg-[#F7C038]/15 border border-[#F7C038]/30 flex items-center justify-center text-[#F7C038] mb-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                  </div>
+                  <h3 class="text-lg font-extrabold text-white mb-2" data-i18n="vault2Title">ملف الأعمال المعتمد في السيرة الذاتية (CV Portfolio)</h3>
+                  <p class="text-sm text-gray-400 leading-relaxed mb-6" data-i18n="vault2Desc">
+                    الأرشيف المهني الرسمي المرفق في السيرة الذاتية ويحتوي على نماذج التغطيات الميدانية، التقارير، والمشاريع المؤسسية.
+                  </p>
+                </div>
+                <a id="vault-2-link" href="https://drive.google.com/drive/folders/16FWoGru920L5Le86opUpWNt2pXbPH2Zd?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/15 font-extrabold text-sm text-center transition block">
+                  <span data-i18n="vault2Btn">فتح مجلد Portfolio على Drive</span> ↗
+                </a>
+              </div>
+
+              <!-- Social & Direct Channels Card -->
+              <div class="p-6 rounded-2xl bg-[#141419] border border-white/10 flex flex-col justify-between">
+                <div>
+                  <div class="mb-4 rounded-xl overflow-hidden h-28 border border-white/10">
+                    <img id="vault-cover-img" src="assets/images/cover.jpg" alt="Mahdi Media Cover" class="w-full h-full object-cover" />
+                  </div>
+                  <h3 class="text-lg font-extrabold text-white mb-1.5" data-i18n="vaultInstaTitle">حسابات إنستغرام الرسمية</h3>
+                  <p class="text-xs text-gray-400 leading-relaxed mb-4" data-i18n="vaultInstaDesc">
+                    تابع أحدث أعمال الريلز، كواليس التصوير، والتصاميم اليومية عبر منصات التواصل الاجتماعي.
+                  </p>
+                </div>
+                <div class="space-y-2">
+                  <a href="https://www.instagram.com/mahdi.media.pro" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-bold text-[#F7C038] flex items-center justify-between transition">
+                    <span>Instagram (Mahdi Media Pro)</span>
+                    <span>@mahdi.media.pro ↗</span>
+                  </a>
+                  <a href="https://www.instagram.com/mhmdmahditakach" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-bold text-gray-200 flex items-center justify-between transition">
+                    <span>Instagram (Personal)</span>
+                    <span>@mhmdmahditakach ↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <!-- Featured Works Cards Grid -->
-        <div id="featured-works-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-      </div>
-    </section>
-
-    <!-- DEDICATED DUAL GOOGLE DRIVE PORTFOLIO VAULT -->
-    <section id="portfolio-vault" class="py-16 relative overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="rounded-3xl bg-gradient-to-br from-[#1f1f27] via-[#18181e] to-[#121216] border border-[#F7C038]/35 p-6 sm:p-10 shadow-2xl">
-          <div class="max-w-3xl mb-8">
-            <span class="inline-block px-3.5 py-1 rounded-full bg-[#F7C038]/15 text-[#F7C038] text-xs font-bold mb-3 border border-[#F7C038]/30" data-i18n="vaultBadge">
-              الأرشيف الرسمي الكامل — Google Drive &amp; Instagram
-            </span>
-            <h2 class="text-2xl sm:text-3xl font-black text-white mb-2" data-i18n="vaultHeading">خانة معرض الأعمال المتخصصة</h2>
-            <p class="text-sm sm:text-base text-gray-300 leading-relaxed" data-i18n="vaultSub">
-              تصفح المجلدات الكاملة للأعمال المصورة، التقارير التلفزيونية، حلقات البودكاست، والتصاميم بجودتها الأصلية مباشرة عبر Google Drive
+      <!-- 3. MONTHLY PACKAGES & PRINT/DIGITAL SERVICES -->
+      <section id="services-pricing" class="py-16 bg-[#15151a] border-t border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-12">
+            <h2 class="text-2xl sm:text-4xl font-black text-white mb-3" data-i18n="servicesHeading">باقاتنا الشهرية وخدماتنا — Mahdi Media</h2>
+            <p class="text-sm sm:text-base text-gray-400" data-i18n="servicesSub">
+              باقات شهرية متكاملة لصناعة المحتوى وإدارة الهوية البصرية، بالإضافة إلى خدمات التصميم الطباعي والرقمي
             </p>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <!-- Drive Vault 1: My WORK -->
-            <div class="p-6 rounded-2xl bg-[#141419] border border-white/10 hover:border-[#F7C038]/60 transition flex flex-col justify-between">
-              <div>
-                <div class="w-12 h-12 rounded-xl bg-[#F7C038]/15 border border-[#F7C038]/30 flex items-center justify-center text-[#F7C038] font-black text-xl mb-4">
-                  📁
-                </div>
-                <h3 class="text-lg font-extrabold text-white mb-2" data-i18n="vault1Title">المعرض الشامل للأعمال والمشاريع (My WORK)</h3>
-                <p class="text-sm text-gray-400 leading-relaxed mb-6" data-i18n="vault1Desc">
-                  يضم نماذج مختارة من مشاريع التصوير، المونتاج، التصاميم الغرافيكية، والأعمال الإبداعية المنفذة لعلامة Mahdi Media.
-                </p>
-              </div>
-              <a href="https://drive.google.com/drive/folders/1vRzDhx01ktw4y4p_fqv-AcFg-RI4ekvu?usp=drive_link" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-[#F7C038] hover:bg-[#eab308] text-black font-extrabold text-sm text-center transition block">
-                <span data-i18n="vault1Btn">فتح مجلد My WORK على Drive</span> ↗
-              </a>
-            </div>
+          <!-- Monthly Packages Grid -->
+          <div id="monthly-packages-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"></div>
 
-            <!-- Drive Vault 2: CV Portfolio -->
-            <div class="p-6 rounded-2xl bg-[#141419] border border-white/10 hover:border-[#F7C038]/60 transition flex flex-col justify-between">
-              <div>
-                <div class="w-12 h-12 rounded-xl bg-[#F7C038]/15 border border-[#F7C038]/30 flex items-center justify-center text-[#F7C038] font-black text-xl mb-4">
-                  🎬
-                </div>
-                <h3 class="text-lg font-extrabold text-white mb-2" data-i18n="vault2Title">ملف الأعمال المعتمد في السيرة الذاتية (CV Portfolio)</h3>
-                <p class="text-sm text-gray-400 leading-relaxed mb-6" data-i18n="vault2Desc">
-                  الأرشيف المهني الرسمي المرفق في السيرة الذاتية ويحتوي على نماذج التغطيات الميدانية، التقارير، والمشاريع المؤسسية.
+          <!-- Print & Digital Graphic Design Section -->
+          <div class="rounded-3xl bg-[#111115] border border-white/10 p-6 sm:p-8 lg:p-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div class="lg:col-span-8">
+                <h3 class="text-xl sm:text-2xl font-black text-white mb-2" data-i18n="printSectionTitle">
+                  خدمات التصميم الغرافيكي للمطبوعات والرقمي (Print &amp; Digital)
+                </h3>
+                <p class="text-sm text-gray-400 mb-6" data-i18n="printSectionSub">
+                  اضغط على أي خدمة لإضافتها مباشرة إلى قائمة طلبك في حاسبة التكلفة أدناه:
                 </p>
+                <div id="print-digital-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3"></div>
               </div>
-              <a href="https://drive.google.com/drive/folders/16FWoGru920L5Le86opUpWNt2pXbPH2Zd?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/15 font-extrabold text-sm text-center transition block">
-                <span data-i18n="vault2Btn">فتح مجلد Portfolio على Drive</span> ↗
-              </a>
-            </div>
-
-            <!-- Social & Direct Channels Card -->
-            <div class="p-6 rounded-2xl bg-[#141419] border border-white/10 flex flex-col justify-between">
-              <div>
-                <div class="mb-4 rounded-xl overflow-hidden h-28 border border-white/10">
-                  <img src="assets/images/cover.jpg" alt="Mahdi Media Cover" class="w-full h-full object-cover" />
+              <div class="lg:col-span-4">
+                <div class="rounded-2xl overflow-hidden border border-[#F7C038]/30 shadow-xl bg-black">
+                  <img id="services-poster-img" src="assets/images/services-post.jpg" alt="Mahdi Media Graphic Design Services" class="w-full h-auto object-cover" />
                 </div>
-                <h3 class="text-lg font-extrabold text-white mb-1.5" data-i18n="vaultInstaTitle">حسابات إنستغرام الرسمية</h3>
-                <p class="text-xs text-gray-400 leading-relaxed mb-4" data-i18n="vaultInstaDesc">
-                  تابع أحدث أعمال الريلز، كواليس التصوير، والتصاميم اليومية عبر منصات التواصل الاجتماعي.
-                </p>
-              </div>
-              <div class="space-y-2">
-                <a href="https://www.instagram.com/mahdi.media.pro" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-bold text-[#F7C038] flex items-center justify-between transition">
-                  <span>Instagram (Mahdi Media Pro)</span>
-                  <span>@mahdi.media.pro ↗</span>
-                </a>
-                <a href="https://www.instagram.com/mhmdmahditakach" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-bold text-gray-200 flex items-center justify-between transition">
-                  <span>Instagram (Personal)</span>
-                  <span>@mhmdmahditakach ↗</span>
-                </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- MONTHLY PACKAGES & PRINT/DIGITAL SERVICES -->
-    <section id="services-pricing" class="py-16 bg-[#15151a] border-t border-b border-white/5">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-          <h2 class="text-2xl sm:text-4xl font-black text-white mb-3" data-i18n="servicesHeading">باقاتنا الشهرية وخدماتنا — Mahdi Media</h2>
-          <p class="text-sm sm:text-base text-gray-400" data-i18n="servicesSub">
-            باقات شهرية متكاملة لصناعة المحتوى وإدارة الهوية البصرية، بالإضافة إلى خدمات التصميم الطباعي والرقمي
-          </p>
-        </div>
-
-        <!-- Monthly Packages Grid -->
-        <div id="monthly-packages-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"></div>
-
-        <!-- Print & Digital Graphic Design Section -->
-        <div class="rounded-3xl bg-[#111115] border border-white/10 p-6 sm:p-8 lg:p-10">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div class="lg:col-span-8">
-              <h3 class="text-xl sm:text-2xl font-black text-white mb-2" data-i18n="printSectionTitle">
-                خدمات التصميم الغرافيكي للمطبوعات والرقمي (Print &amp; Digital)
-              </h3>
-              <p class="text-sm text-gray-400 mb-6" data-i18n="printSectionSub">
-                اضغط على أي خدمة لإضافتها مباشرة إلى قائمة طلبك في حاسبة التكلفة أدناه:
-              </p>
-              <div id="print-digital-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3"></div>
-            </div>
-            <div class="lg:col-span-4">
-              <div class="rounded-2xl overflow-hidden border border-[#F7C038]/30 shadow-xl bg-black">
-                <img src="assets/images/services-post.jpg" alt="Mahdi Media Graphic Design Services" class="w-full h-auto object-cover" />
-              </div>
-            </div>
+      <!-- 4. INTERACTIVE APPROXIMATE PRICE CALCULATOR & QUOTE BUILDER -->
+      <section id="quote-calculator" class="py-16 lg:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="inline-block px-3.5 py-1 rounded-full bg-[#F7C038]/15 text-[#F7C038] text-xs font-bold mb-3 border border-[#F7C038]/30" data-i18n="calcBadge">
+              حاسبة تفاعلية استرشادية
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-black text-white mb-3" data-i18n="calcHeading">حاسبة التكلفة التقريبية وبناء الطلب</h2>
+            <p class="text-sm sm:text-base text-gray-400" data-i18n="calcSub">
+              اختر الباقة أو حدد الخدمات الفردية والكميات المطلوبة لحساب التكلفة التقريبية وتجهيز رسالتك تلقائياً
+            </p>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- INTERACTIVE APPROXIMATE PRICE CALCULATOR & QUOTE BUILDER -->
-    <section id="quote-calculator" class="py-16 lg:py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-          <span class="inline-block px-3.5 py-1 rounded-full bg-[#F7C038]/15 text-[#F7C038] text-xs font-bold mb-3 border border-[#F7C038]/30" data-i18n="calcBadge">
-            حاسبة تفاعلية استرشادية
-          </span>
-          <h2 class="text-2xl sm:text-4xl font-black text-white mb-3" data-i18n="calcHeading">حاسبة التكلفة التقريبية وبناء الطلب</h2>
-          <p class="text-sm sm:text-base text-gray-400" data-i18n="calcSub">
-            اختر الباقة أو حدد الخدمات الفردية والكميات المطلوبة لحساب التكلفة التقريبية وتجهيز رسالتك تلقائياً
-          </p>
-        </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Builder Controls (7 cols) -->
+            <div class="lg:col-span-7 space-y-6 bg-[#18181f] p-6 sm:p-8 rounded-3xl border border-white/10">
+              <div>
+                <h3 class="text-base font-extrabold text-[#F7C038] mb-3" data-i18n="calcStep1">1. اختر باقة شهرية (اختياري):</h3>
+                <div id="calc-pkg-options" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5"></div>
+              </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <!-- Left/Right Builder Controls (7 cols) -->
-          <div class="lg:col-span-7 space-y-6 bg-[#18181f] p-6 sm:p-8 rounded-3xl border border-white/10">
-            <!-- Step 1: Monthly Package -->
-            <div>
-              <h3 class="text-base font-extrabold text-[#F7C038] mb-3" data-i18n="calcStep1">1. اختر باقة شهرية (اختياري):</h3>
-              <div id="calc-pkg-options" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5"></div>
-            </div>
+              <div class="pt-4 border-t border-white/10">
+                <h3 class="text-base font-extrabold text-[#F7C038] mb-3" data-i18n="calcStep2">2. الخدمات الفردية بالقطعة (À La Carte Services - Fresh USD):</h3>
+                <div id="calc-alc-list" class="space-y-2.5"></div>
+              </div>
 
-            <!-- Step 2: À La Carte Services -->
-            <div class="pt-4 border-t border-white/10">
-              <h3 class="text-base font-extrabold text-[#F7C038] mb-3" data-i18n="calcStep2">2. الخدمات الفردية بالقطعة (À La Carte Services - Fresh USD):</h3>
-              <div id="calc-alc-list" class="space-y-2.5"></div>
-            </div>
+              <div class="pt-4 border-t border-white/10">
+                <h3 class="text-base font-extrabold text-[#F7C038] mb-3" data-i18n="calcStep3">3. خدمات التصميم الطباعي والرقمي الإضافية (يُحدد سعرها بالنقاش):</h3>
+                <div id="calc-print-chips" class="flex flex-wrap gap-2"></div>
+              </div>
 
-            <!-- Step 3: Print & Digital Design Items -->
-            <div class="pt-4 border-t border-white/10">
-              <h3 class="text-base font-extrabold text-[#F7C038] mb-3" data-i18n="calcStep3">3. خدمات التصميم الطباعي والرقمي الإضافية (يُحدد سعرها بالنقاش):</h3>
-              <div id="calc-print-chips" class="flex flex-wrap gap-2"></div>
-            </div>
-
-            <!-- Step 4: Client Info & Brief -->
-            <div class="pt-4 border-t border-white/10 space-y-4">
-              <h3 class="text-base font-extrabold text-[#F7C038]" data-i18n="calcStep4">4. بياناتك وملاحظات المشروع (اختياري):</h3>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label for="input-client-name" class="block text-xs font-bold text-gray-300 mb-1.5" data-i18n="labelClientName">الاسم الكريم</label>
-                  <input id="input-client-name" type="text" data-i18n-placeholder="placeholderClientName" placeholder="مثال: أحمد منصور" class="w-full px-3.5 py-2.5 rounded-xl bg-[#111115] border border-white/15 text-sm text-white focus:outline-none focus:border-[#F7C038]" />
+              <div class="pt-4 border-t border-white/10 space-y-4">
+                <h3 class="text-base font-extrabold text-[#F7C038]" data-i18n="calcStep4">4. بياناتك وملاحظات المشروع (اختياري):</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="input-client-name" class="block text-xs font-bold text-gray-300 mb-1.5" data-i18n="labelClientName">الاسم الكريم</label>
+                    <input id="input-client-name" type="text" data-i18n-placeholder="placeholderClientName" placeholder="مثال: أحمد منصور" class="w-full px-3.5 py-2.5 rounded-xl bg-[#111115] border border-white/15 text-sm text-white focus:outline-none focus:border-[#F7C038]" />
+                  </div>
+                  <div>
+                    <label for="input-client-org" class="block text-xs font-bold text-gray-300 mb-1.5" data-i18n="labelClientOrg">اسم الشركة أو المؤسسة (اختياري)</label>
+                    <input id="input-client-org" type="text" data-i18n-placeholder="placeholderClientOrg" placeholder="مثال: شركة النور للتسويق" class="w-full px-3.5 py-2.5 rounded-xl bg-[#111115] border border-white/15 text-sm text-white focus:outline-none focus:border-[#F7C038]" />
+                  </div>
                 </div>
                 <div>
-                  <label for="input-client-org" class="block text-xs font-bold text-gray-300 mb-1.5" data-i18n="labelClientOrg">اسم الشركة أو المؤسسة (اختياري)</label>
-                  <input id="input-client-org" type="text" data-i18n-placeholder="placeholderClientOrg" placeholder="مثال: شركة النور للتسويق" class="w-full px-3.5 py-2.5 rounded-xl bg-[#111115] border border-white/15 text-sm text-white focus:outline-none focus:border-[#F7C038]" />
+                  <label for="input-client-notes" class="block text-xs font-bold text-gray-300 mb-1.5" data-i18n="labelClientNotes">تفاصيل إضافية أو موعد التسليم المطلوب</label>
+                  <textarea id="input-client-notes" rows="3" data-i18n-placeholder="placeholderClientNotes" placeholder="اكتب أي تفاصيل حول طبيعة المشروع أو الاستفسار..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#111115] border border-white/15 text-sm text-white focus:outline-none focus:border-[#F7C038]"></textarea>
                 </div>
               </div>
+            </div>
+
+            <!-- Sticky Summary & Dual Dispatch Panel (5 cols) -->
+            <div class="lg:col-span-5 lg:sticky lg:top-24 bg-gradient-to-b from-[#22222b] to-[#17171d] p-6 sm:p-8 rounded-3xl border-2 border-[#F7C038]/50 shadow-2xl space-y-5">
+              <div class="flex items-center justify-between gap-2 pb-4 border-b border-white/10">
+                <h3 class="text-lg font-black text-white" data-i18n="summaryTitle">ملخص الطلب والتكلفة التقريبية</h3>
+                <span id="calc-items-badge" class="px-2.5 py-1 rounded-full text-xs font-bold bg-[#F7C038]/20 text-[#F7C038]">0 بنود محددة</span>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-[#111115] border border-[#F7C038]/30">
+                <div class="text-xs text-gray-400 font-semibold mb-1" data-i18n="approxTotalLabel">التكلفة التقريبية المبدئية:</div>
+                <div id="calc-approx-total" class="text-3xl sm:text-4xl font-black text-[#F7C038]">~$0 USD</div>
+                <div class="mt-3 pt-3 border-t border-white/10 text-xs text-amber-200/90 leading-relaxed">
+                  <strong data-i18n="disclaimerTitle">ملاحظة حول التسعير:</strong>
+                  <span data-i18n="disclaimerText">هذا المبلغ تقريبي واسترشادي فقط. يتم تحديد السعر النهائي بالاتفاق المباشر بعد مناقشة تفاصيل المشروع ومتطلباته بدقة.</span>
+                </div>
+              </div>
+
               <div>
-                <label for="input-client-notes" class="block text-xs font-bold text-gray-300 mb-1.5" data-i18n="labelClientNotes">تفاصيل إضافية أو موعد التسليم المطلوب</label>
-                <textarea id="input-client-notes" rows="3" data-i18n-placeholder="placeholderClientNotes" placeholder="اكتب أي تفاصيل حول طبيعة المشروع أو الاستفسار..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#111115] border border-white/15 text-sm text-white focus:outline-none focus:border-[#F7C038]"></textarea>
+                <label for="quote-message-preview" class="block text-xs font-bold text-gray-300 mb-1.5" data-i18n="previewLabel">
+                  معاينة الرسالة الجاهزة للإرسال (تتضمن خدماتك المختارة):
+                </label>
+                <textarea id="quote-message-preview" rows="7" readonly class="w-full p-3.5 rounded-xl bg-[#111115] border border-white/10 text-xs text-gray-200 font-mono leading-relaxed focus:outline-none"></textarea>
+              </div>
+
+              <div class="space-y-3 pt-2">
+                <button type="button" id="btn-send-whatsapp" class="w-full py-3.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-sm shadow-lg shadow-emerald-500/20 transition flex items-center justify-center gap-2">
+                  <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                  <span data-i18n="btnWhatsappSimple">إرسال عبر واتساب (للاستفسار والعمل البسيط)</span>
+                </button>
+
+                <button type="button" id="btn-send-email" class="w-full py-3.5 px-4 rounded-xl bg-[#F7C038] hover:bg-[#eab308] text-black font-extrabold text-sm shadow-lg shadow-[#F7C038]/20 transition flex items-center justify-center gap-2">
+                  <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  <span data-i18n="btnEmailOfficial">إرسال إيميل رسمي (للعمل الاحترافي والشركات)</span>
+                </button>
+
+                <div class="grid grid-cols-2 gap-2.5 pt-1">
+                  <button type="button" id="btn-copy-quote" class="py-2.5 px-3 rounded-xl bg-white/10 hover:bg-white/15 text-white text-xs font-bold transition" data-i18n="btnCopyMsg">
+                    نسخ نص الطلب
+                  </button>
+                  <button type="button" id="btn-reset-calc" class="py-2.5 px-3 rounded-xl bg-white/5 hover:bg-red-500/20 text-gray-300 hover:text-red-300 border border-white/10 text-xs font-bold transition" data-i18n="btnResetCalc">
+                    إعادة تعيين الحاسبة
+                  </button>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <!-- Sticky Summary & Dual Dispatch Panel (5 cols) -->
-          <div class="lg:col-span-5 lg:sticky lg:top-24 bg-gradient-to-b from-[#22222b] to-[#17171d] p-6 sm:p-8 rounded-3xl border-2 border-[#F7C038]/50 shadow-2xl space-y-5">
-            <div class="flex items-center justify-between gap-2 pb-4 border-b border-white/10">
-              <h3 class="text-lg font-black text-white" data-i18n="summaryTitle">ملخص الطلب والتكلفة التقريبية</h3>
-              <span id="calc-items-badge" class="px-2.5 py-1 rounded-full text-xs font-bold bg-[#F7C038]/20 text-[#F7C038]">0 بنود محددة</span>
+      <!-- 5. CV, EXPERIENCE, SKILLS & EDUCATION -->
+      <section id="cv-section" class="py-16 bg-[#15151a] border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="mb-12">
+            <h2 class="text-2xl sm:text-4xl font-black text-white mb-2" data-i18n="cvHeading">السيرة الذاتية والخبرات العملية</h2>
+            <p class="text-sm sm:text-base text-gray-400 max-w-2xl" data-i18n="cvSub">
+              مسيرة مهنية تجمع بين الإعلام الميداني التلفزيوني، إنتاج البودكاست، والتصميم الغرافيكي المتكامل
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-7 space-y-4">
+              <h3 class="text-lg font-extrabold text-[#F7C038] mb-4" data-i18n="expTitle">الخبرات العملية والميدانية</h3>
+              <div id="cv-experience-list" class="space-y-4"></div>
             </div>
 
-            <!-- Approximate Price Box -->
-            <div class="p-4 rounded-2xl bg-[#111115] border border-[#F7C038]/30">
-              <div class="text-xs text-gray-400 font-semibold mb-1" data-i18n="approxTotalLabel">التكلفة التقريبية المبدئية:</div>
-              <div id="calc-approx-total" class="text-3xl sm:text-4xl font-black text-[#F7C038]">~$0 USD</div>
-              <div class="mt-3 pt-3 border-t border-white/10 text-xs text-amber-200/90 leading-relaxed">
-                <strong data-i18n="disclaimerTitle">ملاحظة حول التسعير:</strong>
-                <span data-i18n="disclaimerText">هذا المبلغ تقريبي واسترشادي فقط. يتم تحديد السعر النهائي بالاتفاق المباشر بعد مناقشة تفاصيل المشروع ومتطلباته بدقة.</span>
+            <div class="lg:col-span-5 space-y-6">
+              <div class="p-6 rounded-2xl bg-[#1a1a20] border border-white/10 space-y-5">
+                <h3 class="text-lg font-extrabold text-[#F7C038]" data-i18n="skillsTitle">المهارات التقنية، البرامج، والمعدات</h3>
+
+                <div>
+                  <div class="text-xs font-bold text-gray-400 uppercase mb-2" data-i18n="softwareLabel">برامج المونتاج والتصميم</div>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1.5 rounded-lg bg-[#F7C038]/15 text-[#F7C038] border border-[#F7C038]/30 text-xs font-bold">Adobe Premiere Pro</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-[#F7C038]/15 text-[#F7C038] border border-[#F7C038]/30 text-xs font-bold">Adobe After Effects</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-[#F7C038]/15 text-[#F7C038] border border-[#F7C038]/30 text-xs font-bold">Adobe Photoshop</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="text-xs font-bold text-gray-400 uppercase mb-2" data-i18n="gearLabel">المعدات المتمرس في تشغيلها</div>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-200 border border-white/10 text-xs font-semibold">Sony Cameras</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-200 border border-white/10 text-xs font-semibold">Canon Cameras</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-200 border border-white/10 text-xs font-semibold">Studio &amp; Field Lighting</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-200 border border-white/10 text-xs font-semibold">Broadcast Audio Recording</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="text-xs font-bold text-gray-400 uppercase mb-2" data-i18n="specLabel">مجالات التخصص</div>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-300 text-xs">Photography</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-300 text-xs">Videography &amp; News Reports</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-300 text-xs">Podcast Production</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-300 text-xs">Video Editing &amp; Color Grading</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-300 text-xs">Print &amp; Digital Graphic Design</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-6 rounded-2xl bg-[#1a1a20] border border-white/10 space-y-4">
+                <h3 class="text-lg font-extrabold text-[#F7C038]" data-i18n="eduTitle">التعليم الأكاديمي واللغات</h3>
+                <div id="cv-education-list" class="space-y-3"></div>
+                <div class="pt-3 border-t border-white/10">
+                  <div class="text-xs font-bold text-gray-400 mb-2" data-i18n="langLabel">اللغات</div>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 rounded-lg bg-white/5 text-xs text-gray-200 font-semibold" data-i18n="langArVal">العربية: ممتاز (اللغة الأم)</span>
+                    <span class="px-3 py-1 rounded-lg bg-white/5 text-xs text-gray-200 font-semibold" data-i18n="langEnVal">الإنجليزية: جيد</span>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 
-            <!-- Live Message Preview -->
+  <!-- ========================================================================
+       CUSTOM 404 PAGE VIEW (Anti-Vibe-Coding #2)
+       ======================================================================== -->
+  <section id="view-404-section" class="hidden flex-1 py-24 px-4 flex items-center justify-center">
+    <div class="max-w-lg w-full text-center p-8 sm:p-10 rounded-3xl bg-[#18181f] border border-[#F7C038]/40 shadow-2xl space-y-5">
+      <div class="text-6xl font-black text-[#F7C038]">404</div>
+      <h2 class="text-2xl font-black text-white">الصفحة غير موجودة | Page Not Found</h2>
+      <p class="text-sm text-gray-400 leading-relaxed">
+        عذراً، الرابط الذي تحاول الوصول إليه غير متوفر أو تم نقله. يمكنك العودة إلى الصفحة الرئيسية لاستعراض الأعمال والخدمات.
+      </p>
+      <button type="button" id="btn-404-home" class="px-6 py-3 rounded-xl bg-[#F7C038] hover:bg-[#eab308] text-black font-extrabold text-sm transition">
+        العودة إلى الصفحة الرئيسية | Back to Home
+      </button>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       HIDDEN SECRET ROUTE ADMIN PORTAL (#/mahdi-vault-admin)
+       Completely hidden from public navigation; protected by Salted SHA-256
+       ======================================================================== -->
+  <section id="admin-portal-view" class="hidden flex-1 py-12 px-4 sm:px-6 lg:px-8">
+    <!-- 1. PROTECTED ADMIN LOGIN GATE -->
+    <div id="admin-login-gate" class="max-w-md mx-auto my-8 p-6 sm:p-8 rounded-3xl bg-[#18181f] border-2 border-[#F7C038]/50 shadow-2xl space-y-6">
+      <div class="flex items-center justify-between border-b border-white/10 pb-4">
+        <div class="flex items-center gap-3">
+          <img data-asset="logo" src="assets/images/logo.png" alt="Logo" class="h-9 w-auto" />
+          <div>
+            <h2 class="text-lg font-black text-white">بوابة الإدارة المحمية</h2>
+            <p class="text-xs text-[#F7C038]">Protected Owner Authentication Gate</p>
+          </div>
+        </div>
+        <button type="button" id="btn-login-back-site" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/15 text-xs text-gray-300 font-bold">
+          العودة للموقع
+        </button>
+      </div>
+
+      <div id="admin-login-error" class="hidden p-3.5 rounded-xl bg-red-500/20 border border-red-500/40 text-xs font-bold text-red-200"></div>
+
+      <form id="admin-login-form" class="space-y-4">
+        <div>
+          <label for="admin-username-input" class="block text-xs font-bold text-gray-300 mb-1.5">اسم المستخدم (Admin Username)</label>
+          <input id="admin-username-input" type="text" required autocomplete="off" placeholder="mahdi.admin" class="w-full px-3.5 py-2.5 rounded-xl bg-[#111115] border border-white/15 text-sm text-white focus:outline-none focus:border-[#F7C038]" />
+        </div>
+        <div>
+          <label for="admin-password-input" class="block text-xs font-bold text-gray-300 mb-1.5">مفتاح المرور السري (Access Password)</label>
+          <input id="admin-password-input" type="password" required autocomplete="off" placeholder="••••••••••••" class="w-full px-3.5 py-2.5 rounded-xl bg-[#111115] border border-white/15 text-sm text-white focus:outline-none focus:border-[#F7C038]" />
+        </div>
+        <button type="submit" class="w-full py-3.5 px-4 rounded-xl bg-[#F7C038] hover:bg-[#eab308] text-black font-extrabold text-sm shadow-lg transition">
+          تسجيل الدخول إلى لوحة التحكم
+        </button>
+      </form>
+
+      <div class="pt-3 border-t border-white/10 text-[11px] text-gray-400 leading-relaxed">
+        🔒 محمي بتشفير SHA-256 المملح (Salted Hash) بدون تخزين أي كلمة مرور نصية في الكود المصدري، مع قفل تلقائي ضد محاولات التخمين (Brute-Force Lockout).
+      </div>
+    </div>
+
+    <!-- 2. FULL DRAG-AND-DROP VISUAL CMS DASHBOARD -->
+    <div id="admin-cms-dashboard" class="hidden max-w-7xl mx-auto space-y-6">
+      <!-- Top Admin Bar -->
+      <div class="no-print p-5 rounded-3xl bg-[#18181f] border border-[#F7C038]/40 flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <img data-asset="logo" src="assets/images/logo.png" alt="Logo" class="h-10 w-auto" />
+          <div>
+            <h2 class="text-xl font-black text-white">لوحة تحكم الموقع الشاملة (Drag &amp; Drop Visual CMS)</h2>
+            <p class="text-xs text-gray-400">عدّل أي نص، سعر، صورة، أو ترتيب قسم بالسحب والإفلات، ثم صدّر ملف <code class="text-[#F7C038]">data.js</code> لرفعه على GitHub</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-2.5">
+          <button type="button" id="btn-admin-back-site" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-white text-xs font-bold transition">
+            معاينة الموقع العام ↗
+          </button>
+          <button type="button" id="btn-export-data-js" class="px-4 py-2 rounded-xl bg-[#F7C038] hover:bg-[#eab308] text-black text-xs font-extrabold transition">
+            تحميل ملف data.js المحدث لـ GitHub ⬇
+          </button>
+          <button type="button" id="btn-admin-logout" class="px-3.5 py-2 rounded-xl bg-red-500/20 hover:bg-red-500/30 text-red-300 border border-red-500/30 text-xs font-bold transition">
+            تسجيل خروج
+          </button>
+        </div>
+      </div>
+
+      <!-- Admin Navigation Tabs -->
+      <div class="no-print flex flex-wrap items-center gap-2">
+        <button type="button" data-admin-tab="tab-sections" class="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold bg-[#F7C038] text-black shadow transition">
+          1. ترتيب الأقسام (Drag &amp; Drop)
+        </button>
+        <button type="button" data-admin-tab="tab-identity" class="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-[#1a1a22] text-gray-300 hover:bg-white/10 border border-white/10 transition">
+          2. الهوية والنصوص والصور والتواصل
+        </button>
+        <button type="button" data-admin-tab="tab-works" class="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-[#1a1a22] text-gray-300 hover:bg-white/10 border border-white/10 transition">
+          3. الأعمال المميزة (Drag &amp; Drop)
+        </button>
+        <button type="button" data-admin-tab="tab-pricing" class="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-[#1a1a22] text-gray-300 hover:bg-white/10 border border-white/10 transition">
+          4. الباقات والأسعار (Drag &amp; Drop)
+        </button>
+        <button type="button" data-admin-tab="tab-cv" class="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-[#1a1a22] text-gray-300 hover:bg-white/10 border border-white/10 transition">
+          5. السيرة الذاتية والخبرات (Drag &amp; Drop)
+        </button>
+        <button type="button" data-admin-tab="tab-export" class="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-[#1a1a22] text-gray-300 hover:bg-white/10 border border-white/10 transition">
+          6. الفاتورة الخاصة والأمان والتصدير
+        </button>
+      </div>
+
+      <!-- TAB 1: DRAG & DROP SECTIONS ORDER -->
+      <div id="tab-sections" class="p-6 rounded-3xl bg-[#18181f] border border-white/10 space-y-4">
+        <div>
+          <h3 class="text-lg font-black text-white">ترتيب وإظهار أقسام الموقع بالسحب والإفلات (Drag &amp; Drop Sections)</h3>
+          <p class="text-xs text-gray-400">اسحب أي قسم وأفلته لتغيير ترتيبه في الصفحة الرئيسية، أو استخدم أزرار الأسهم وإظهار/إخفاء القسم:</p>
+        </div>
+        <div id="admin-sections-dnd-list" class="space-y-3"></div>
+      </div>
+
+      <!-- TAB 2: IDENTITY, HERO, STATS, IMAGES & CONTACT -->
+      <div id="tab-identity" class="hidden p-6 rounded-3xl bg-[#18181f] border border-white/10 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-4">
+          <div>
+            <h3 class="text-lg font-black text-white">تعديل الهوية، النصوص، الإحصائيات، والصور (Drag &amp; Drop Images)</h3>
+            <p class="text-xs text-gray-400">عدّل أي تفصيل نصي بالعربية والإنجليزية أو اسحب الصور وأفلتها مباشرة لتحديثها</p>
+          </div>
+          <button type="button" id="btn-save-identity" class="px-5 py-2.5 rounded-xl bg-[#F7C038] hover:bg-[#eab308] text-black font-extrabold text-xs transition">
+            حفظ النصوص وبيانات التواصل ✓
+          </button>
+        </div>
+
+        <!-- Drag & Drop Brand Images -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="dropzone-box p-4 rounded-2xl bg-[#121217] text-center space-y-2" data-asset-drop="logo">
+            <div class="text-xs font-bold text-[#F7C038]">الشعار الرسمي (Logo)</div>
+            <img id="cms-preview-logo" src="assets/images/logo.png" alt="Logo" class="h-14 mx-auto object-contain" />
+            <label class="cursor-pointer inline-block px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/15 text-xs text-white font-semibold">
+              اسحب صورة هنا أو اختر ملفاً
+              <input type="file" accept="image/*" class="hidden" data-asset-input="logo" />
+            </label>
+          </div>
+
+          <div class="dropzone-box p-4 rounded-2xl bg-[#121217] text-center space-y-2" data-asset-drop="profile">
+            <div class="text-xs font-bold text-[#F7C038]">الصورة الشخصية (Hero Portrait)</div>
+            <img id="cms-preview-profile" src="assets/images/profile.jpg" alt="Profile" class="h-14 w-14 rounded-full mx-auto object-cover" />
+            <label class="cursor-pointer inline-block px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/15 text-xs text-white font-semibold">
+              اسحب صورة هنا أو اختر ملفاً
+              <input type="file" accept="image/*" class="hidden" data-asset-input="profile" />
+            </label>
+          </div>
+
+          <div class="dropzone-box p-4 rounded-2xl bg-[#121217] text-center space-y-2" data-asset-drop="cover">
+            <div class="text-xs font-bold text-[#F7C038]">صورة الغلاف (Cover Banner)</div>
+            <img id="cms-preview-cover" src="assets/images/cover.jpg" alt="Cover" class="h-14 w-28 rounded-lg mx-auto object-cover" />
+            <label class="cursor-pointer inline-block px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/15 text-xs text-white font-semibold">
+              اسحب صورة هنا أو اختر ملفاً
+              <input type="file" accept="image/*" class="hidden" data-asset-input="cover" />
+            </label>
+          </div>
+        </div>
+
+        <!-- Hero Texts -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div>
+            <label class="block text-gray-400 font-bold mb-1">الاسم الرئيسي (عربي)</label>
+            <input id="cms-hero-title-ar" type="text" class="w-full px-3 py-2 rounded-xl bg-[#121217] border border-white/15 text-white" />
+          </div>
+          <div>
+            <label class="block text-gray-400 font-bold mb-1">Main Name (English)</label>
+            <input id="cms-hero-title-en" type="text" class="w-full px-3 py-2 rounded-xl bg-[#121217] border border-white/15 text-white" />
+          </div>
+          <div>
+            <label class="block text-gray-400 font-bold mb-1">شريط التخصصات (عربي)</label>
+            <input id="cms-hero-role-ar" type="text" class="w-full px-3 py-2 rounded-xl bg-[#121217] border border-white/15 text-white" />
+          </div>
+          <div>
+            <label class="block text-gray-400 font-bold mb-1">Role Badge (English)</label>
+            <input id="cms-hero-role-en" type="text" class="w-full px-3 py-2 rounded-xl bg-[#121217] border border-white/15 text-white" />
+          </div>
+          <div>
+            <label class="block text-gray-400 font-bold mb-1">وصف العلامة التجارية (عربي)</label>
+            <input id="cms-hero-brand-ar" type="text" class="w-full px-3 py-2 rounded-xl bg-[#121217] border border-white/15 text-white" />
+          </div>
+          <div>
+            <label class="block text-gray-400 font-bold mb-1">Brand Tagline (English)</label>
+            <input id="cms-hero-brand-en" type="text" class="w-full px-3 py-2 rounded-xl bg-[#121217] border border-white/15 text-white" />
+          </div>
+          <div>
+            <label class="block text-gray-400 font-bold mb-1">النبذة التعريفية (عربي)</label>
+            <textarea id="cms-hero-sub-ar" rows="3" class="w-full px-3 py-2 rounded-xl bg-[#121217] border border-white/15 text-white"></textarea>
+          </div>
+          <div>
+            <label class="block text-gray-400 font-bold mb-1">Bio Summary (English)</label>
+            <textarea id="cms-hero-sub-en" rows="3" class="w-full px-3 py-2 rounded-xl bg-[#121217] border border-white/15 text-white"></textarea>
+          </div>
+        </div>
+
+        <!-- 4 Stats Editor -->
+        <div>
+          <h4 class="text-sm font-extrabold text-[#F7C038] mb-2.5">تعديل البطاقات الإحصائية الأربع:</h4>
+          <div id="cms-stats-editor-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"></div>
+        </div>
+
+        <!-- Contact & Drive Vault Links -->
+        <div class="pt-4 border-t border-white/10">
+          <h4 class="text-sm font-extrabold text-[#F7C038] mb-3">قنوات التواصل وروابط مجلدات Google Drive:</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
             <div>
-              <label for="quote-message-preview" class="block text-xs font-bold text-gray-300 mb-1.5" data-i18n="previewLabel">
-                معاينة الرسالة الجاهزة للإرسال (تتضمن خدماتك المختارة):
-              </label>
-              <textarea id="quote-message-preview" rows="7" readonly class="w-full p-3.5 rounded-xl bg-[#111115] border border-white/10 text-xs text-gray-200 font-mono leading-relaxed focus:outline-none"></textarea>
+              <label class="block text-gray-400 mb-1">رقم واتساب (بدون + أو أصفار دولية)</label>
+              <input id="cms-contact-wa" type="text" class="w-full px-3 py-2 rounded-xl bg-[#121217] border border-white/15 text-white" />
             </div>
+            <div>
+              <label class="block text-gray-400 mb-1">البريد الإلكتروني الرسمي</label>
+              <input id="cms-contact-email" type="email" class="w-full px-3 py-2 rounded-xl bg-[#121217] border border-white/15 text-white" />
+            </div>
+            <div>
+              <label class="block text-gray-400 mb-1">حساب إنستغرام العلامة التجارية</label>
+              <input id="cms-contact-ig-brand" type="text" class="w-full px-3 py-2 rounded-xl bg-[#121217] border border-white/15 text-white" />
+            </div>
+            <div>
+              <label class="block text-gray-400 mb-1">حساب إنستغرام الشخصي</label>
+              <input id="cms-contact-ig-personal" type="text" class="w-full px-3 py-2 rounded-xl bg-[#121217] border border-white/15 text-white" />
+            </div>
+            <div>
+              <label class="block text-gray-400 mb-1">رابط Google Drive الأول (My WORK)</label>
+              <input id="cms-contact-drive1" type="url" class="w-full px-3 py-2 rounded-xl bg-[#121217] border border-white/15 text-[#F7C038]" />
+            </div>
+            <div>
+              <label class="block text-gray-400 mb-1">رابط Google Drive الثاني (CV Portfolio)</label>
+              <input id="cms-contact-drive2" type="url" class="w-full px-3 py-2 rounded-xl bg-[#121217] border border-white/15 text-[#F7C038]" />
+            </div>
+          </div>
+        </div>
+      </div>
 
-            <!-- Dual Contact Dispatch Buttons -->
-            <div class="space-y-3 pt-2">
-              <button type="button" id="btn-send-whatsapp" class="w-full py-3.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-sm shadow-lg shadow-emerald-500/20 transition flex items-center justify-center gap-2">
-                <span>💬</span>
-                <span data-i18n="btnWhatsappSimple">إرسال عبر واتساب (للاستفسار والعمل البسيط)</span>
+      <!-- TAB 3: DRAG & DROP FEATURED WORKS MANAGER -->
+      <div id="tab-works" class="hidden p-6 rounded-3xl bg-[#18181f] border border-white/10 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
+          <div>
+            <h3 class="text-lg font-black text-white">إدارة وترتيب الأعمال المميزة بالسحب والإفلات (Drag &amp; Drop Works)</h3>
+            <p class="text-xs text-gray-400">اسحب البطاقات لتغيير ترتيب ظهورها في الصفحة الرئيسية، أو اسحب صورة مباشرة فوق أي بطاقة لتحديث غلافها</p>
+          </div>
+          <button type="button" id="open-add-work-btn" class="px-4 py-2.5 rounded-xl bg-[#F7C038] hover:bg-[#eab308] text-black text-xs font-extrabold transition" data-i18n="addWorkBtn">
+            + إضافة عمل مميز للمعرض
+          </button>
+        </div>
+        <div id="admin-works-dnd-list" class="space-y-4"></div>
+      </div>
+
+      <!-- TAB 4: DRAG & DROP PACKAGES & PRICING EDITOR -->
+      <div id="tab-pricing" class="hidden p-6 rounded-3xl bg-[#18181f] border border-white/10 space-y-6">
+        <div>
+          <h3 class="text-lg font-black text-white mb-1">ترتيب وتعديل الباقات الشهرية بالسحب والإفلات</h3>
+          <p class="text-xs text-gray-400 mb-4">يمكنك سحب الباقات لإعادة ترتيبها أو تعديل أسعارها وأسمائها فوراً:</p>
+          <div id="admin-pkgs-dnd-list" class="space-y-3"></div>
+        </div>
+
+        <div class="pt-6 border-t border-white/10">
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <div>
+              <h3 class="text-lg font-black text-white">الخدمات الفردية في الحاسبة (À La Carte Drag &amp; Drop)</h3>
+              <p class="text-xs text-gray-400">اسحب لترتيب ظهور الخدمات في الحاسبة أو عدّل الأسعار وأضف خدمات جديدة:</p>
+            </div>
+            <button type="button" id="btn-admin-add-alc" class="px-4 py-2 rounded-xl bg-[#F7C038] text-black font-extrabold text-xs">
+              + إضافة خدمة فردية جديدة
+            </button>
+          </div>
+          <div id="admin-alc-dnd-list" class="space-y-2.5"></div>
+        </div>
+      </div>
+
+      <!-- TAB 5: DRAG & DROP CV & EXPERIENCE EDITOR -->
+      <div id="tab-cv" class="hidden p-6 rounded-3xl bg-[#18181f] border border-white/10 space-y-4">
+        <div class="flex items-center justify-between gap-2 border-b border-white/10 pb-4">
+          <div>
+            <h3 class="text-lg font-black text-white">إدارة وترتيب السيرة الذاتية والخبرات بالسحب والإفلات</h3>
+            <p class="text-xs text-gray-400">اسحب الخبرات لتغيير ترتيبها الزمني أو عدّل المسمى الوظيفي والجهة مباشرة:</p>
+          </div>
+          <button type="button" id="btn-admin-add-exp" class="px-4 py-2 rounded-xl bg-[#F7C038] text-black font-extrabold text-xs">
+            + إضافة خبرة جديدة
+          </button>
+        </div>
+        <div id="admin-cv-dnd-list" class="space-y-3"></div>
+      </div>
+
+      <!-- TAB 6: PRIVATE INVOICE STUDIO + GITHUB EXPORT + SECURITY SETTINGS -->
+      <div id="tab-export" class="hidden space-y-6">
+        <!-- Security & Secret URL Customizer + Factory Reset -->
+        <div class="no-print p-6 rounded-3xl bg-[#18181f] border border-white/10 space-y-4">
+          <h3 class="text-lg font-black text-white">إعدادات الأمان والرابط السري وتصدير التعديلات لـ GitHub</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+            <div>
+              <label class="block text-gray-400 font-bold mb-1">الرابط السري للوحة التحكم (Secret Route Slug)</label>
+              <input id="cms-secret-slug-input" type="text" placeholder="mahdi-vault-admin" class="w-full px-3 py-2 rounded-xl bg-[#121217] border border-white/15 text-[#F7C038] font-mono" />
+              <div class="mt-1 text-[11px] text-gray-400">الرابط الحالي: <code id="cms-secret-url-preview" class="text-white">#/mahdi-vault-admin</code></div>
+            </div>
+            <div>
+              <label class="block text-gray-400 font-bold mb-1">اسم مستخدم جديد (اختياري)</label>
+              <input id="cms-new-admin-user" type="text" placeholder="mahdi.admin" class="w-full px-3 py-2 rounded-xl bg-[#121217] border border-white/15 text-white" />
+            </div>
+            <div>
+              <label class="block text-gray-400 font-bold mb-1">كلمة مرور جديدة (تُشفر بـ SHA-256)</label>
+              <input id="cms-new-admin-pass" type="password" placeholder="اتركها فارغة للإبقاء على الحالية" class="w-full px-3 py-2 rounded-xl bg-[#121217] border border-white/15 text-white" />
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+            <button type="button" id="btn-save-security-settings" class="px-5 py-2.5 rounded-xl bg-[#F7C038] text-black font-extrabold text-xs">
+              تحديث الرابط السري وتشفير كلمة المرور ✓
+            </button>
+            <button type="button" id="btn-reset-cms-defaults" class="px-4 py-2 rounded-xl bg-white/5 hover:bg-red-500/20 text-gray-300 hover:text-red-300 border border-white/10 text-xs font-bold">
+              استعادة الضبط الأصلي للموقع
+            </button>
+          </div>
+        </div>
+
+        <!-- Smart Auto-Calculating Owner Invoice Studio & Archive (Feature #6) -->
+        <div class="p-6 rounded-3xl bg-[#18181f] border border-white/10 space-y-6">
+          <div class="no-print flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-4">
+            <div>
+              <h3 class="text-lg font-black text-white">أداة الفاتورة الذكية وسجل الفواتير (Smart Auto-Calculating Invoice Studio)</h3>
+              <p class="text-xs text-gray-400">اختر الخدمات من القائمة ليتم إدراجها مع سعرها وحساب المجموع والخصم تلقائياً، ثم احفظها في الأرشيف أو اطبعها كـ PDF</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+              <button type="button" id="btn-inv-save-history" class="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-xs transition">
+                حفظ الفاتورة في السجل ✓
               </button>
-
-              <button type="button" id="btn-send-email" class="w-full py-3.5 px-4 rounded-xl bg-[#F7C038] hover:bg-[#eab308] text-black font-extrabold text-sm shadow-lg shadow-[#F7C038]/20 transition flex items-center justify-center gap-2">
-                <span>✉️</span>
-                <span data-i18n="btnEmailOfficial">إرسال إيميل رسمي (للعمل الاحترافي والشركات)</span>
+              <button type="button" id="btn-admin-print-invoice" class="px-5 py-2.5 rounded-xl bg-[#F7C038] hover:bg-[#eab308] text-black font-extrabold text-xs transition">
+                طباعة الفاتورة / حفظ كـ PDF 🖨
               </button>
-
-              <div class="grid grid-cols-2 gap-2.5 pt-1">
-                <button type="button" id="btn-copy-quote" class="py-2.5 px-3 rounded-xl bg-white/10 hover:bg-white/15 text-white text-xs font-bold transition" data-i18n="btnCopyMsg">
-                  نسخ نص الطلب
-                </button>
-                <button type="button" id="btn-reset-calc" class="py-2.5 px-3 rounded-xl bg-white/5 hover:bg-red-500/20 text-gray-300 hover:text-red-300 border border-white/10 text-xs font-bold transition" data-i18n="btnResetCalc">
-                  إعادة تعيين الحاسبة
-                </button>
-              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- CV, EXPERIENCE, SKILLS & EDUCATION -->
-    <section id="cv-section" class="py-16 bg-[#15151a] border-t border-white/10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="mb-12">
-          <h2 class="text-2xl sm:text-4xl font-black text-white mb-2" data-i18n="cvHeading">السيرة الذاتية والخبرات العملية</h2>
-          <p class="text-sm sm:text-base text-gray-400 max-w-2xl" data-i18n="cvSub">
-            مسيرة مهنية تجمع بين الإعلام الميداني التلفزيوني، إنتاج البودكاست، والتصميم الغرافيكي المتكامل
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          <!-- Experience Timeline (7 cols) -->
-          <div class="lg:col-span-7 space-y-4">
-            <h3 class="text-lg font-extrabold text-[#F7C038] mb-4" data-i18n="expTitle">الخبرات العملية والميدانية</h3>
-            <div id="cv-experience-list" class="space-y-4"></div>
-          </div>
-
-          <!-- Skills, Equipment & Education (5 cols) -->
-          <div class="lg:col-span-5 space-y-6">
-            <div class="p-6 rounded-2xl bg-[#1a1a20] border border-white/10 space-y-5">
-              <h3 class="text-lg font-extrabold text-[#F7C038]" data-i18n="skillsTitle">المهارات التقنية، البرامج، والمعدات</h3>
-
+          <!-- Interactive Builder Controls (Hidden when printing) -->
+          <div class="no-print space-y-4 bg-[#121217] p-5 rounded-2xl border border-white/10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 text-xs">
               <div>
-                <div class="text-xs font-bold text-gray-400 uppercase mb-2" data-i18n="softwareLabel">برامج المونتاج والتصميم</div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1.5 rounded-lg bg-[#F7C038]/15 text-[#F7C038] border border-[#F7C038]/30 text-xs font-bold">Adobe Premiere Pro</span>
-                  <span class="px-3 py-1.5 rounded-lg bg-[#F7C038]/15 text-[#F7C038] border border-[#F7C038]/30 text-xs font-bold">Adobe After Effects</span>
-                  <span class="px-3 py-1.5 rounded-lg bg-[#F7C038]/15 text-[#F7C038] border border-[#F7C038]/30 text-xs font-bold">Adobe Photoshop</span>
-                </div>
+                <label class="block text-gray-400 font-bold mb-1">رقم الفاتورة (Invoice Nº)</label>
+                <input id="inv-number-input" type="text" value="INV-0001" class="w-full px-3 py-2 rounded-xl bg-[#1a1a22] border border-white/15 text-[#F7C038] font-mono font-bold" />
               </div>
-
               <div>
-                <div class="text-xs font-bold text-gray-400 uppercase mb-2" data-i18n="gearLabel">المعدات المتمرس في تشغيلها</div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-200 border border-white/10 text-xs font-semibold">Sony Cameras</span>
-                  <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-200 border border-white/10 text-xs font-semibold">Canon Cameras</span>
-                  <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-200 border border-white/10 text-xs font-semibold">Studio &amp; Field Lighting</span>
-                  <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-200 border border-white/10 text-xs font-semibold">Broadcast Audio Recording</span>
-                </div>
+                <label class="block text-gray-400 font-bold mb-1">التاريخ (Date)</label>
+                <input id="inv-date-input" type="date" value="2026-10-17" class="w-full px-3 py-2 rounded-xl bg-[#1a1a22] border border-white/15 text-white" />
               </div>
-
               <div>
-                <div class="text-xs font-bold text-gray-400 uppercase mb-2" data-i18n="specLabel">مجالات التخصص</div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-300 text-xs">Photography</span>
-                  <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-300 text-xs">Videography &amp; News Reports</span>
-                  <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-300 text-xs">Podcast Production</span>
-                  <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-300 text-xs">Video Editing &amp; Color Grading</span>
-                  <span class="px-3 py-1.5 rounded-lg bg-white/5 text-gray-300 text-xs">Print &amp; Digital Graphic Design</span>
-                </div>
+                <label class="block text-gray-400 font-bold mb-1">اسم العميل / الشركة</label>
+                <input id="inv-client-name-input" type="text" placeholder="اسم العميل أو المؤسسة" class="w-full px-3 py-2 rounded-xl bg-[#1a1a22] border border-white/15 text-white" />
+              </div>
+              <div>
+                <label class="block text-gray-400 font-bold mb-1">عنوان / هاتف العميل</label>
+                <input id="inv-client-details-input" type="text" placeholder="بيروت | +961 ..." class="w-full px-3 py-2 rounded-xl bg-[#1a1a22] border border-white/15 text-white" />
+              </div>
+              <div>
+                <label class="block text-gray-400 font-bold mb-1">الخصم ($ Discount)</label>
+                <input id="inv-discount-input" type="number" min="0" value="0" class="w-full px-3 py-2 rounded-xl bg-[#1a1a22] border border-white/15 text-emerald-400 font-bold" />
               </div>
             </div>
 
-            <!-- Education & Languages -->
-            <div class="p-6 rounded-2xl bg-[#1a1a20] border border-white/10 space-y-4">
-              <h3 class="text-lg font-extrabold text-[#F7C038]" data-i18n="eduTitle">التعليم الأكاديمي واللغات</h3>
-              <div id="cv-education-list" class="space-y-3"></div>
-              <div class="pt-3 border-t border-white/10">
-                <div class="text-xs font-bold text-gray-400 mb-2" data-i18n="langLabel">اللغات</div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 rounded-lg bg-white/5 text-xs text-gray-200 font-semibold" data-i18n="langArVal">العربية: ممتاز (اللغة الأم)</span>
-                  <span class="px-3 py-1 rounded-lg bg-white/5 text-xs text-gray-200 font-semibold" data-i18n="langEnVal">الإنجليزية: جيد</span>
+            <!-- Quick Preset Service Selector -->
+            <div class="pt-3 border-t border-white/10 flex flex-wrap items-center gap-2">
+              <select id="inv-service-preset-select" class="flex-1 min-w-[240px] px-3 py-2.5 rounded-xl bg-[#1a1a22] border border-[#F7C038]/40 text-xs text-white">
+                <option value="">-- اختر باقة أو خدمة لإدراجها بالسعر التلقائي --</option>
+              </select>
+              <button type="button" id="btn-inv-add-preset" class="px-4 py-2.5 rounded-xl bg-[#F7C038] hover:bg-[#eab308] text-black font-extrabold text-xs transition">
+                + إدراج الخدمة المختارة
+              </button>
+              <button type="button" id="btn-inv-add-empty" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-xs transition">
+                + إضافة بند مخصص
+              </button>
+            </div>
+
+            <!-- Dynamic Line Items List -->
+            <div class="space-y-2">
+              <div class="grid grid-cols-12 gap-2 px-2 text-[11px] font-bold text-gray-400">
+                <div class="col-span-6">البند / الخدمة (Concept)</div>
+                <div class="col-span-2 text-center">الكمية (Units)</div>
+                <div class="col-span-2 text-center">سعر الوحدة ($)</div>
+                <div class="col-span-2">المجموع</div>
+              </div>
+              <div id="inv-items-editor-list" class="space-y-2"></div>
+            </div>
+          </div>
+
+          <!-- Printable Dark-Mode Invoice Sheet (Synced Automatically) -->
+          <div class="border border-white/40 bg-[#0c0c0e] text-white max-w-4xl mx-auto" dir="ltr">
+            <div class="grid grid-cols-1 md:grid-cols-2 border-b border-white/40">
+              <div class="p-8 border-b md:border-b-0 md:border-r border-white/40 flex flex-col justify-between">
+                <div class="flex items-center gap-3 mb-8">
+                  <img data-asset="logo" src="assets/images/logo.png" alt="Mahdi Media" class="h-12 w-auto" />
+                  <span class="text-xl font-bold tracking-wider">Mahdi Media</span>
+                </div>
+                <div class="text-xs space-y-1 text-gray-300">
+                  <div class="font-bold text-white">MOHAMMAD MAHDI TAKACH | محمد مهدي الطقش</div>
+                  <div>BEIRUT &amp; BEKAA, LEBANON</div>
+                  <div class="pt-2">PHONE / WHATSAPP: +961 81 947 685</div>
+                  <div>MAIL: mhmdmahditakach@gmail.com</div>
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <div id="inv-print-number" class="p-6 border-b border-white/40 text-center text-lg font-semibold tracking-widest">
+                  INVOICE Nº INV-0001
+                </div>
+                <div id="inv-print-date" class="p-6 border-b border-white/40 text-center text-sm tracking-widest">
+                  2026-10-17
+                </div>
+                <div class="p-8 text-center space-y-1">
+                  <div id="inv-print-client-name" class="text-sm font-bold tracking-wider mb-2 text-[#F7C038]">CLIENT NAME / COMPANY</div>
+                  <div id="inv-print-client-details" class="text-xs text-gray-300">BEIRUT, LEBANON</div>
                 </div>
               </div>
             </div>
+
+            <div class="grid grid-cols-4 px-8 py-4 border-b border-white/40 text-xs font-bold tracking-widest uppercase">
+              <div class="col-span-2">CONCEPT / SERVICE</div>
+              <div>UNITS × RATE</div>
+              <div class="text-right">AMOUNT</div>
+            </div>
+
+            <div id="inv-printable-rows" class="p-8 min-h-[200px] space-y-2 text-sm"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 border-t border-white/40">
+              <div class="p-6 border-b md:border-b-0 md:border-r border-white/40 flex items-center justify-center text-[#F7C038] text-2xl">
+                ⟶
+              </div>
+              <div class="col-span-2 p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-2 tracking-widest">
+                <div>
+                  <div class="text-base font-bold">TOTAL AMOUNT</div>
+                  <div id="inv-print-subtotal-line" class="text-xs text-gray-400">Subtotal: $460 USD</div>
+                </div>
+                <span id="inv-print-total" class="text-2xl font-black text-[#F7C038]">$460 USD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Saved Invoices History Archive -->
+          <div class="no-print pt-4 border-t border-white/10 space-y-3">
+            <h4 class="text-sm font-extrabold text-[#F7C038]">سجل الفواتير المحفوظة (Saved Invoices Archive):</h4>
+            <div id="inv-saved-history-list" class="space-y-2"></div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-[#0d0d10] border-t border-white/10 py-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-      <div class="flex items-center gap-3">
-        <img src="assets/images/logo.png" alt="Mahdi Media" class="h-9 w-auto" />
-        <span class="text-xs sm:text-sm text-gray-400" data-i18n="footerRights">جميع الحقوق محفوظة © محمد مهدي طقش — Mahdi Media Pro</span>
+  <!-- FOOTER (Zero Dead Links + Legal Privacy Policy & Terms of Service — Anti-Vibe-Coding #4, #12, #13) -->
+  <footer class="bg-[#0d0d10] border-t border-white/10 py-10 no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <img id="footer-secret-logo" data-asset="logo" src="assets/images/logo.png" alt="Mahdi Media" class="h-9 w-auto cursor-pointer" title="Mahdi Media Pro" />
+          <span class="text-xs sm:text-sm text-gray-400" data-i18n="footerRights">جميع الحقوق محفوظة © محمد مهدي الطقش — Mahdi Media Pro</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-4 text-xs font-semibold text-gray-400">
+          <a href="https://wa.me/96181947685" target="_blank" rel="noopener noreferrer" class="hover:text-[#F7C038] transition">WhatsApp: 81/947685</a>
+          <a href="https://t.me/mhmdmahditakach" target="_blank" rel="noopener noreferrer" class="hover:text-[#F7C038] transition">Telegram: @mhmdmahditakach</a>
+          <a href="mailto:mhmdmahditakach@gmail.com" class="hover:text-[#F7C038] transition">Email</a>
+          <a href="https://www.instagram.com/mahdi.media.pro" target="_blank" rel="noopener noreferrer" class="hover:text-[#F7C038] transition">@mahdi.media.pro</a>
+        </div>
       </div>
-      <div class="flex flex-wrap items-center gap-4 text-xs font-semibold text-gray-400">
-        <a href="https://wa.me/96181947685" target="_blank" rel="noopener noreferrer" class="hover:text-[#F7C038] transition">WhatsApp: 81/947685</a>
-        <a href="https://t.me/mhmdmahditakach" target="_blank" rel="noopener noreferrer" class="hover:text-[#F7C038] transition">Telegram: @mhmdmahditakach</a>
-        <a href="mailto:mhmdmahditakach@gmail.com" class="hover:text-[#F7C038] transition">Email</a>
-        <a href="https://www.instagram.com/mahdi.media.pro" target="_blank" rel="noopener noreferrer" class="hover:text-[#F7C038] transition">@mahdi.media.pro</a>
+
+      <div class="pt-4 border-t border-white/5 flex flex-wrap items-center justify-between gap-4 text-xs text-gray-500">
+        <div class="flex flex-wrap items-center gap-4">
+          <button type="button" data-open-modal="privacy-policy-modal" class="hover:text-[#F7C038] underline transition" data-i18n="footerPrivacy">سياسة الخصوصية</button>
+          <span>•</span>
+          <button type="button" data-open-modal="terms-service-modal" class="hover:text-[#F7C038] underline transition" data-i18n="footerTerms">شروط الخدمة</button>
+          <span>•</span>
+          <button type="button" data-open-modal="vcard-qr-modal" class="hover:text-[#F7C038] underline transition" data-i18n="footerVcard">بطاقة التواصل الرقمية (vCard &amp; QR)</button>
+          <span>•</span>
+          <a href="https://drive.google.com/drive/folders/1vRzDhx01ktw4y4p_fqv-AcFg-RI4ekvu?usp=drive_link" target="_blank" rel="noopener noreferrer" class="hover:text-[#F7C038] transition">Google Drive Portfolio</a>
+        </div>
       </div>
     </div>
   </footer>
@@ -548,7 +1032,7 @@
     </div>
   </div>
 
-  <!-- ADD FEATURED WORK MODAL (FOR PORTFOLIO CUSTOMIZATION) -->
+  <!-- ADD FEATURED WORK MODAL (ACCESSED FROM PROTECTED ADMIN PANEL) -->
   <div id="add-work-modal" class="hidden fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-4">
     <div class="bg-[#1a1a22] border border-white/15 rounded-3xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
       <div class="flex items-center justify-between border-b border-white/10 pb-3">
@@ -592,6 +1076,76 @@
           <button type="submit" class="px-5 py-2 rounded-xl bg-[#F7C038] text-black font-extrabold">حفظ وإظهار في الرئيسية</button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- PRIVACY POLICY MODAL (Anti-Vibe-Coding #12) -->
+  <div id="privacy-policy-modal" class="hidden fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-4">
+    <div class="bg-[#1a1a22] border border-white/15 rounded-3xl max-w-2xl w-full p-6 sm:p-8 space-y-4 shadow-2xl max-h-[85vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3">
+        <h3 class="text-xl font-black text-white">سياسة الخصوصية | Privacy Policy</h3>
+        <button type="button" data-close-modal="privacy-policy-modal" class="w-8 h-8 rounded-lg bg-white/10 text-white hover:bg-white/20">✕</button>
+      </div>
+      <div class="space-y-3 text-xs sm:text-sm text-gray-300 leading-relaxed">
+        <p><strong>1. جمع البيانات (Data Collection):</strong> لا يقوم موقع <strong>محمد مهدي الطقش (Mahdi Media Pro)</strong> بجمع أو تخزين أي بيانات شخصية للزوار في خوادم خارجية أو قواعد بيانات سحابية. جميع البيانات التي تدخلها في حاسبة التكلفة التقريبية تُعالج محلياً داخل متصفحك فقط لتجهيز رسالتك عبر واتساب أو البريد الإلكتروني.</p>
+        <p><strong>2. التخزين المحلي (Local Storage):</strong> يستخدم الموقع التخزين المحلي للمتصفح لحفظ لغة العرض المفضلة لديك (العربية أو الإنجليزية) فقط، دون أي ملفات تعريف ارتباط تتبعية (Zero Tracking Cookies).</p>
+        <p><strong>3. التواصل المباشر (Direct Communication):</strong> عند إرسالك لطلب عبر واتساب أو البريد الإلكتروني الرسمي (<code>mhmdmahditakach@gmail.com</code>)، تُستخدم معلوماتك حصرياً للرد على استفسارك وتقديم عرض السعر النهائي للمشروع، ولا تتم مشاركتها مع أي طرف ثالث مطلقاً.</p>
+        <p class="text-gray-400 pt-2 border-t border-white/10">In English: Mahdi Media Pro respects your privacy. No visitor personal data is stored on external servers or shared with third parties. Quote Calculator inputs are processed strictly in your browser to pre-fill your direct WhatsApp or official Email inquiry.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMS OF SERVICE MODAL (Anti-Vibe-Coding #13) -->
+  <div id="terms-service-modal" class="hidden fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-4">
+    <div class="bg-[#1a1a22] border border-white/15 rounded-3xl max-w-2xl w-full p-6 sm:p-8 space-y-4 shadow-2xl max-h-[85vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3">
+        <h3 class="text-xl font-black text-white">شروط الخدمة | Terms of Service</h3>
+        <button type="button" data-close-modal="terms-service-modal" class="w-8 h-8 rounded-lg bg-white/10 text-white hover:bg-white/20">✕</button>
+      </div>
+      <div class="space-y-3 text-xs sm:text-sm text-gray-300 leading-relaxed">
+        <p><strong>1. طبيعة الأسعار التقريبية (Approximate Quotes):</strong> جميع المبالغ التي تظهر في حاسبة الموقع هي تقديرات استرشادية وتقريبية بالدولار الأمريكي (Fresh USD). يتم تحديد السعر النهائي والالتزام به بعد مناقشة تفاصيل المشروع، موقع التصوير، وعدد التعديلات مع <strong>محمد مهدي الطقش</strong>.</p>
+        <p><strong>2. حجز مواعيد التصوير والدفعات (Booking &amp; Deposits):</strong> يتم تأكيد حجز أيام التصوير الميداني أو الباقات الشهرية بعد الاتفاق النهائي، وتُصدر الفاتورة الرسمية (Invoice) للعميل عند إتمام الاتفاق والتسليم.</p>
+        <p><strong>3. التعديلات وحقوق الملكية (Revisions &amp; Intellectual Property):</strong> تشمل أعمال المونتاج والتصميم الغرافيكي التعديلات المتفق عليها ضمن نطاق المشروع. يحتفظ المصور بالحق في عرض نماذج من الأعمال المنجزة ضمن معرض الأعمال الرسمي ما لم يُتفق خطياً على سرية المشروع.</p>
+        <p class="text-gray-400 pt-2 border-t border-white/10">In English: All prices calculated on the website are approximate estimates in Fresh USD. Final pricing, shooting schedules, and deliverables are confirmed directly with Mohammad Mahdi Takach prior to project commencement.</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- DIGITAL BUSINESS CARD (VCARD & QR CODE) MODAL (Feature #2) -->
+  <div id="vcard-qr-modal" class="hidden fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-4">
+    <div class="bg-[#1a1a22] border-2 border-[#F7C038]/50 rounded-3xl max-w-md w-full p-6 sm:p-8 space-y-5 shadow-2xl text-center">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3">
+        <div class="flex items-center gap-2.5">
+          <img data-asset="logo" src="assets/images/logo.png" alt="Logo" class="h-7 w-auto" />
+          <h3 class="text-base font-black text-white" data-i18n="vcardModalTitle">بطاقة التواصل الرقمية — محمد مهدي الطقش</h3>
+        </div>
+        <button type="button" data-close-modal="vcard-qr-modal" class="w-8 h-8 rounded-lg bg-white/10 text-white hover:bg-white/20">✕</button>
+      </div>
+
+      <p class="text-xs text-gray-300 leading-relaxed" data-i18n="vcardModalSub">
+        امسح رمز الـ QR بكاميرا الهاتف للتواصل الفوري أو اضغط لحفظ جهة الاتصال كاملة (.vcf) في هاتفك
+      </p>
+
+      <!-- Dynamic QR SVG Container -->
+      <div id="vcard-qr-svg-box" class="py-2"></div>
+
+      <!-- Contact Details Card -->
+      <div class="p-4 rounded-2xl bg-[#121217] border border-white/10 text-xs space-y-1.5 text-gray-200">
+        <div id="vcard-owner-name" class="text-base font-black text-[#F7C038]">محمد مهدي الطقش</div>
+        <div class="text-gray-400">Mahdi Media Pro — Photography, Video &amp; Design</div>
+        <div class="pt-1 font-mono" dir="ltr">Phone / WhatsApp: <span id="vcard-owner-phone" class="text-white font-bold">+96181947685</span></div>
+        <div class="font-mono" dir="ltr">Email: <span id="vcard-owner-email" class="text-white">mhmdmahditakach@gmail.com</span></div>
+        <div class="font-mono" dir="ltr">Instagram: <span id="vcard-owner-ig" class="text-[#F7C038]">@mahdi.media.pro</span></div>
+      </div>
+
+      <div class="space-y-2.5 pt-1">
+        <button type="button" id="btn-download-vcf" class="w-full py-3.5 px-4 rounded-xl bg-[#F7C038] hover:bg-[#eab308] text-black font-extrabold text-xs sm:text-sm shadow-lg transition" data-i18n="vcardSaveBtn">
+          حفظ جهة الاتصال في الهاتف (.vcf)
+        </button>
+        <button type="button" id="btn-copy-vcard-info" class="w-full py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-xs transition" data-i18n="vcardCopyBtn">
+          نسخ بيانات التواصل
+        </button>
+      </div>
     </div>
   </div>
 
